@@ -127,7 +127,7 @@ client = OpenAI(
 response = client.chat.completions.create(
     model=<span className="text-green-400">"quazar-llama-3-70b-instruct"</span>,
     messages=[
-        {<span className="text-yellow-600">"role"</span>: <span className="text-green-400">"user"</span>, <span className="text-yellow-600">"content"</span>: <span className="text-green-400">"Explain Proof-of-Compute."</span>}
+        {'{'}<span className="text-yellow-600">"role"</span>: <span className="text-green-400">"user"</span>, <span className="text-yellow-600">"content"</span>: <span className="text-green-400">"Explain Proof-of-Compute."</span>{'}'}
     ]
 )
 
