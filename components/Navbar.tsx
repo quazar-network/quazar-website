@@ -9,10 +9,11 @@ export const Navbar: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isLangMenuOpen, setIsLangMenuOpen] = useState(false);
-  const [isMobileLangMenuOpen, setIsMobileLangMenuOpen] = useState(false);
+  const [isMobileLangMenuOpen, setIsMobileLangMenuOpen] = useState(false); // For the header dropdown on mobile
   const location = useLocation();
   const navigate = useNavigate();
   const langMenuRef = useRef<HTMLDivElement>(null);
+  const mobileLangMenuRef = useRef<HTMLDivElement>(null);
 
   const languages = [
     { code: 'en', name: 'English' },
@@ -40,6 +41,9 @@ export const Navbar: React.FC = () => {
     const handleClickOutside = (event: MouseEvent) => {
       if (langMenuRef.current && !langMenuRef.current.contains(event.target as Node)) {
         setIsLangMenuOpen(false);
+      }
+      if (mobileLangMenuRef.current && !mobileLangMenuRef.current.contains(event.target as Node)) {
+        setIsMobileLangMenuOpen(false);
       }
     };
 
@@ -70,6 +74,7 @@ export const Navbar: React.FC = () => {
     
     i18n.changeLanguage(langCode);
     setIsLangMenuOpen(false);
+    setIsMobileLangMenuOpen(false);
   };
 
   const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
@@ -175,8 +180,38 @@ export const Navbar: React.FC = () => {
             </a>
           </div>
 
-          {/* Mobile Menu Button */}
-          <div className="md:hidden">
+          {/* Mobile Menu Button & Language Switcher */}
+          <div className="md:hidden flex items-center gap-4">
+            {/* Mobile Language Switcher */}
+            <div className="relative" ref={mobileLangMenuRef}>
+              <button 
+                onClick={() => setIsMobileLangMenuOpen(!isMobileLangMenuOpen)}
+                className="flex items-center gap-2 text-sm font-bold text-gray-300 hover:text-quazar-primary transition-colors uppercase tracking-widest"
+              >
+                <Globe size={16} />
+                <span>{currentLang.code.toUpperCase()}</span>
+                <ChevronDown size={14} className={`transition-transform ${isMobileLangMenuOpen ? 'rotate-180' : ''}`} />
+              </button>
+
+              {isMobileLangMenuOpen && (
+                <div className="absolute top-full right-0 mt-4 w-40 bg-[#0a0a0a] border border-white/10 rounded-lg shadow-xl overflow-hidden py-1">
+                  {languages.map((lang) => (
+                    <button
+                      key={lang.code}
+                      onClick={() => changeLanguage(lang.code)}
+                      className={`w-full text-left px-4 py-2 text-sm font-bold transition-colors ${
+                        i18n.language === lang.code
+                          ? 'text-quazar-primary bg-white/5'
+                          : 'text-gray-400 hover:text-white hover:bg-white/5'
+                      }`}
+                    >
+                      {lang.name}
+                    </button>
+                  ))}
+                </div>
+              )}
+            </div>
+
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
               className="text-white p-2"
@@ -201,39 +236,6 @@ export const Navbar: React.FC = () => {
                 {link.name}
               </a>
             ))}
-            
-            <div className="border-t border-white/10 my-4 pt-4">
-              <button
-                onClick={() => setIsMobileLangMenuOpen(!isMobileLangMenuOpen)}
-                className="w-full flex items-center justify-between px-3 py-3 text-sm font-bold uppercase tracking-wide text-white hover:bg-white/5 rounded-md"
-              >
-                <div className="flex items-center gap-2">
-                  <Globe size={16} />
-                  <span>{currentLang.name}</span>
-                </div>
-                <ChevronDown size={16} className={`transition-transform ${isMobileLangMenuOpen ? 'rotate-180' : ''}`} />
-              </button>
-              
-              {isMobileLangMenuOpen && (
-                <div className="pl-4 mt-2 space-y-1">
-                  {languages.map((lang) => (
-                    <button
-                      key={lang.code}
-                      onClick={() => {
-                        changeLanguage(lang.code);
-                        setIsMobileMenuOpen(false);
-                        setIsMobileLangMenuOpen(false);
-                      }}
-                      className={`flex items-center gap-2 w-full px-3 py-2 text-sm font-bold uppercase tracking-wide rounded-md ${
-                        i18n.language === lang.code ? 'text-quazar-primary bg-white/5' : 'text-gray-400 hover:text-white hover:bg-white/5'
-                      }`}
-                    >
-                      <span>{lang.name}</span>
-                    </button>
-                  ))}
-                </div>
-              )}
-            </div>
           </div>
         </div>
       )}
