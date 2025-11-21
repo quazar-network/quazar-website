@@ -50,6 +50,24 @@ export const Navbar: React.FC = () => {
   }, []);
 
   const changeLanguage = (langCode: string) => {
+    // Preserve current path but change language
+    const currentPath = location.pathname;
+    const pathSegments = currentPath.split('/').filter(Boolean);
+    
+    // pathSegments[0] should be the language code if we are following the structure
+    // If we are at root "/", pathSegments is empty
+    
+    if (pathSegments.length > 0 && languages.some(l => l.code === pathSegments[0])) {
+        // Replace existing lang
+        pathSegments[0] = langCode;
+    } else {
+        // Prepend lang
+        pathSegments.unshift(langCode);
+    }
+    
+    const newPath = `/${pathSegments.join('/')}${location.hash}`;
+    navigate(newPath);
+    
     i18n.changeLanguage(langCode);
     setIsLangMenuOpen(false);
   };
@@ -58,9 +76,13 @@ export const Navbar: React.FC = () => {
     e.preventDefault();
     setIsMobileMenuOpen(false);
 
+    // Check if we are on the landing page for the current language
+    const currentLangPath = `/${currentLang.code}`;
+    const isHomePage = location.pathname === currentLangPath || location.pathname === currentLangPath + '/';
+
     // If we are not on home page, go to home first then scroll
-    if (location.pathname !== '/') {
-      navigate('/');
+    if (!isHomePage) {
+      navigate(currentLangPath);
       // Wait for navigation then scroll
       setTimeout(() => {
         const element = document.querySelector(href);
@@ -93,7 +115,7 @@ export const Navbar: React.FC = () => {
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center">
-          <Link to="/" className="flex items-center gap-3 cursor-pointer">
+          <Link to={`/${currentLang.code}`} className="flex items-center gap-3 cursor-pointer">
             <div className="relative w-10 h-10">
                <QuazarLogo className="w-full h-full object-contain" />
                <div className="absolute inset-0 bg-quazar-primary/30 blur-xl rounded-full -z-10"></div>

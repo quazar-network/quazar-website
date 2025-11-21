@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 
 export const Footer: React.FC = () => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
     // If it's a hash link and we are on a different page, standard routing handles it via the Link component in Navbar
     // But for footer if we are on Terms page, we might want to go home. 
@@ -74,9 +74,9 @@ export const Footer: React.FC = () => {
         </div>
         
         <div className="mt-12 flex flex-col md:flex-row justify-center items-center gap-8 text-sm text-gray-600">
-            <Link to="/privacy" className="hover:text-gray-400">{t('footer.privacy')}</Link>
-            <Link to="/terms" className="hover:text-gray-400">{t('footer.terms')}</Link>
-            <Link to="/cookies" className="hover:text-gray-400">{t('footer.cookies')}</Link>
+            <Link to={`/${i18n.language}/privacy`} className="hover:text-gray-400">{t('footer.privacy')}</Link>
+            <Link to={`/${i18n.language}/terms`} className="hover:text-gray-400">{t('footer.terms')}</Link>
+            <Link to={`/${i18n.language}/cookies`} className="hover:text-gray-400">{t('footer.cookies')}</Link>
         </div>
       </div>
     </footer>
