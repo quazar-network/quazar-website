@@ -2,8 +2,10 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { Cookie } from 'lucide-react';
+import { useTranslation, Trans } from 'react-i18next';
 
 export const CookieConsent: React.FC = () => {
+  const { t } = useTranslation();
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
@@ -40,11 +42,15 @@ export const CookieConsent: React.FC = () => {
             <Cookie className="text-quazar-primary" size={24} />
           </div>
           <div>
-            <h3 className="text-white font-bold text-lg mb-2">We value your privacy</h3>
+            <h3 className="text-white font-bold text-lg mb-2">{t('cookieConsent.title')}</h3>
             <p className="text-gray-400 text-sm leading-relaxed max-w-2xl">
-              We use cookies to enhance your browsing experience, serve personalized content, and analyze our traffic. 
-              By clicking "Accept All", you consent to our use of cookies. You can manage your preferences or withdraw 
-              consent at any time. Read our <Link to="/cookies" className="text-quazar-primary hover:underline">Cookie Notice</Link> and <Link to="/privacy" className="text-quazar-primary hover:underline">Privacy Policy</Link>.
+              <Trans 
+                i18nKey="cookieConsent.desc" 
+                components={{ 
+                  1: <Link to="/cookies" className="text-quazar-primary hover:underline" />, 
+                  2: <Link to="/privacy" className="text-quazar-primary hover:underline" /> 
+                }} 
+              />
             </p>
           </div>
         </div>
@@ -54,13 +60,13 @@ export const CookieConsent: React.FC = () => {
             onClick={handleDecline}
             className="px-6 py-3 rounded-lg border border-white/10 text-white font-medium text-sm hover:bg-white/5 transition-colors w-full sm:w-auto whitespace-nowrap"
           >
-            Necessary Only
+            {t('cookieConsent.necessary')}
           </button>
           <button 
             onClick={handleAccept}
             className="px-6 py-3 rounded-lg bg-quazar-primary text-black font-bold text-sm hover:bg-cyan-300 transition-colors shadow-[0_0_20px_rgba(0,240,255,0.2)] w-full sm:w-auto whitespace-nowrap"
           >
-            Accept All
+            {t('cookieConsent.accept')}
           </button>
         </div>
 

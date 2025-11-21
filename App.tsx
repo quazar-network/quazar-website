@@ -1,6 +1,7 @@
 
-import React from 'react';
+import React, { useEffect } from 'react';
 import { HashRouter, Routes, Route } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 import { Navbar } from './components/Navbar';
 import { Hero } from './components/Hero';
 import { Features } from './components/Features';
@@ -34,6 +35,16 @@ const LandingPage: React.FC = () => {
 };
 
 function App() {
+  const { t } = useTranslation();
+
+  useEffect(() => {
+    document.title = t('app.metaTitle');
+    const metaDescription = document.querySelector('meta[name="description"]');
+    if (metaDescription) {
+      metaDescription.setAttribute('content', t('app.metaDescription'));
+    }
+  }, [t]);
+
   return (
     <HashRouter>
       <div className="min-h-screen bg-quazar-black font-sans selection:bg-quazar-primary selection:text-black flex flex-col">

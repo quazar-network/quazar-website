@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { Box, ShieldCheck, Cpu, User, FileJson, ArrowDown, Check } from 'lucide-react';
+import { useTranslation, Trans } from 'react-i18next';
 
 export const QuazarProtocol: React.FC = () => {
+  const { t } = useTranslation();
   const [step, setStep] = useState(0);
   const [isManual, setIsManual] = useState(false);
 
@@ -21,20 +23,20 @@ export const QuazarProtocol: React.FC = () => {
 
   const steps = [
     {
-      title: "Task Routing & Assembly",
-      desc: "User request is routed via relay to a random node. After inference, the proof and signatures are packaged into a transaction."
+      title: t('protocol.steps.routing.title'),
+      desc: t('protocol.steps.routing.desc')
     },
     {
-      title: "Multi-Signature",
-      desc: "The Miner signs the completed inference. 2-3 random Validators verify the result and append their signatures."
+      title: t('protocol.steps.multiSig.title'),
+      desc: t('protocol.steps.multiSig.desc')
     },
     {
-      title: "Consensus",
-      desc: "The block is finalized. The protocol validates the compute proofs and ensures the consensus threshold is reached."
+      title: t('protocol.steps.consensus.title'),
+      desc: t('protocol.steps.consensus.desc')
     },
     {
-      title: "Atomic Settlement",
-      desc: "Smart contract triggers. QZAR is deducted from the User and distributed to the Miner and Validators instantly."
+      title: t('protocol.steps.settlement.title'),
+      desc: t('protocol.steps.settlement.desc')
     }
   ];
 
@@ -43,9 +45,11 @@ export const QuazarProtocol: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">The <span className="text-quazar-primary">Quazar Protocol</span></h2>
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+             <Trans i18nKey="protocol.title" components={{ 1: <span className="text-quazar-primary" /> }} />
+          </h2>
           <p className="text-gray-400 max-w-2xl mx-auto">
-            A verifiable consensus engine designed for non-deterministic AI workloads.
+            {t('protocol.subtitle')}
           </p>
         </div>
 
@@ -93,7 +97,7 @@ export const QuazarProtocol: React.FC = () => {
                 <div className={`w-12 h-12 rounded-full bg-[#111] border border-white/10 flex items-center justify-center transition-all duration-300 ${step === 3 ? 'border-red-500/50 shadow-[0_0_15px_rgba(239,68,68,0.3)]' : ''}`}>
                     <User className="text-gray-400" size={20} />
                 </div>
-                <span className="text-[10px] text-gray-500 font-mono mt-2">USER</span>
+                <span className="text-[10px] text-gray-500 font-mono mt-2">{t('protocol.diagram.user')}</span>
                 
                 {/* Payment Deduction Animation (Step 3/4) */}
                 <div className={`absolute top-0 right-[-40px] text-red-500 font-mono font-bold text-xs transition-all duration-700 ${step === 3 ? 'opacity-100 -translate-y-4' : 'opacity-0 translate-y-0'}`}>
@@ -108,11 +112,11 @@ export const QuazarProtocol: React.FC = () => {
             }`}></div>
 
             {/* CENTER: The Block */}
-            <div className={`relative w-64 h-40 bg-[#080808] border-2 rounded-lg flex flex-col items-center justify-center z-10 transition-all duration-500 ${
+                <div className={`relative w-64 h-40 bg-[#080808] border-2 rounded-lg flex flex-col items-center justify-center z-10 transition-all duration-500 ${
                 step === 2 ? 'border-quazar-primary shadow-[0_0_30px_rgba(0,240,255,0.2)] scale-105' : 'border-white/10'
             }`}>
                 <div className="absolute -top-3 bg-[#080808] px-2 text-[10px] text-gray-500 font-mono border border-white/10 rounded">
-                    BLOCK #89102
+                    {t('protocol.diagram.block')} #89102
                 </div>
 
                 {/* The Transaction Card */}
@@ -129,7 +133,7 @@ export const QuazarProtocol: React.FC = () => {
                     <div className="flex items-center gap-2">
                         <FileJson size={16} className="text-gray-400"/>
                         <div className="flex flex-col">
-                            <span className="text-[10px] text-gray-300 font-mono">TX_HASH</span>
+                            <span className="text-[10px] text-gray-300 font-mono">{t('protocol.diagram.txHash')}</span>
                             <span className="text-[8px] text-gray-600 font-mono">0x7F...9A</span>
                         </div>
                     </div>
@@ -154,7 +158,7 @@ export const QuazarProtocol: React.FC = () => {
                 {/* Validated Badge */}
                 {step >= 2 && (
                     <div className="absolute bottom-[-12px] bg-quazar-primary text-black text-[10px] font-bold px-3 py-0.5 rounded-full flex items-center gap-1 animate-bounce">
-                        <Check size={10} /> CONSENSUS
+                        <Check size={10} /> {t('protocol.diagram.consensus')}
                     </div>
                 )}
             </div>
@@ -180,7 +184,7 @@ export const QuazarProtocol: React.FC = () => {
                     <div className={`w-12 h-12 rounded bg-[#111] border border-white/10 flex items-center justify-center transition-colors ${step === 1 ? 'border-green-500 text-green-500' : 'text-gray-500'}`}>
                         <Cpu size={20} />
                     </div>
-                    <span className="text-[10px] text-gray-500 font-mono mt-2">MINER</span>
+                    <span className="text-[10px] text-gray-500 font-mono mt-2">{t('protocol.diagram.miner')}</span>
                 </div>
 
                 {/* Validators */}
@@ -192,7 +196,7 @@ export const QuazarProtocol: React.FC = () => {
                     <div className={`w-12 h-12 rounded bg-[#111] border border-white/10 flex items-center justify-center transition-colors ${step === 1 ? 'border-blue-500 text-blue-500' : 'text-gray-500'}`}>
                         <ShieldCheck size={20} />
                     </div>
-                    <span className="text-[10px] text-gray-500 font-mono mt-2">VALIDATORS</span>
+                    <span className="text-[10px] text-gray-500 font-mono mt-2">{t('protocol.diagram.validators')}</span>
                 </div>
             </div>
 

@@ -2,8 +2,10 @@
 import React from 'react';
 import { Github, Send } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 
 export const Footer: React.FC = () => {
+  const { t } = useTranslation();
   const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
     // If it's a hash link and we are on a different page, standard routing handles it via the Link component in Navbar
     // But for footer if we are on Terms page, we might want to go home. 
@@ -15,8 +17,8 @@ export const Footer: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col md:flex-row justify-between items-center">
           <div className="mb-8 md:mb-0">
-            <span className="text-2xl font-bold tracking-wider text-white font-display">QUAZAR</span>
-            <p className="text-gray-500 text-sm mt-2">© 2025 Quazar Network. All rights reserved.</p>
+            <span className="text-2xl font-bold tracking-wider text-white font-display">{t('app.title').toUpperCase()}</span>
+            <p className="text-gray-500 text-sm mt-2">{t('footer.copyright')}</p>
           </div>
 
           <div className="flex space-x-8">
@@ -37,7 +39,7 @@ export const Footer: React.FC = () => {
               </svg>
             </a>
             <a 
-              href="https://github.com/quazar-network" 
+              href="https://github.com/quazar_network" 
               target="_blank" 
               rel="noopener noreferrer"
               className="text-gray-400 hover:text-quazar-primary transition-colors"
@@ -71,10 +73,10 @@ export const Footer: React.FC = () => {
           </div>
         </div>
         
-        <div className="mt-12 flex flex-col md:flex-row justify-center gap-8 text-sm text-gray-600">
-            <Link to="/privacy" className="hover:text-gray-400">Privacy Policy</Link>
-            <Link to="/terms" className="hover:text-gray-400">Terms of Use</Link>
-            <Link to="/cookies" className="hover:text-gray-400">Cookie Notice</Link>
+        <div className="mt-12 flex flex-col md:flex-row justify-center items-center gap-8 text-sm text-gray-600">
+            <Link to="/privacy" className="hover:text-gray-400">{t('footer.privacy')}</Link>
+            <Link to="/terms" className="hover:text-gray-400">{t('footer.terms')}</Link>
+            <Link to="/cookies" className="hover:text-gray-400">{t('footer.cookies')}</Link>
         </div>
       </div>
     </footer>

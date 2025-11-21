@@ -1,8 +1,11 @@
 
 import React from 'react';
 import { Key, Fingerprint, Coins, Network, Bot, Shield, LineChart, Blocks } from 'lucide-react';
+import { useTranslation, Trans } from 'react-i18next';
 
 export const AiAgents: React.FC = () => {
+  const { t } = useTranslation();
+
   return (
     <section id="ai-agents" className="py-24 bg-black relative overflow-hidden border-t border-white/5">
       {/* Background Noise */}
@@ -15,18 +18,20 @@ export const AiAgents: React.FC = () => {
             <div>
                 <div className="inline-flex items-center gap-2 px-3 py-1 rounded-sm bg-white/5 border border-white/10 mb-6">
                     <Network size={14} className="text-quazar-primary" />
-                    <span className="text-xs font-bold text-white tracking-widest uppercase">Swarm Intelligence</span>
+                    <span className="text-xs font-bold text-white tracking-widest uppercase">{t('aiAgents.swarmIntelligence')}</span>
                 </div>
-                <h2 className="text-4xl font-bold text-white mb-6">Autonomous <br/> <span className="text-gray-500">Agent Infrastructure</span></h2>
+                <h2 className="text-4xl font-bold text-white mb-6">
+                    <Trans i18nKey="aiAgents.title" components={{ 1: <br/>, 2: <span className="text-gray-500" /> }} />
+                </h2>
                 <p className="text-gray-400 text-lg mb-10 leading-relaxed">
-                    Deploy autonomous agents bridging AI models and smart contracts. Enable direct on-chain collaboration and monetization.
+                    {t('aiAgents.desc')}
                 </p>
 
                 <div className="space-y-4">
                     {[
-                        { icon: Key, title: "Zero-Key Delegation", desc: "Abstract Account permissions without private key exposure." },
-                        { icon: Coins, title: "Unified API Economy", desc: "Standardized monetization interface for all agent interactions." },
-                        { icon: Fingerprint, title: "Digital Identity", desc: "On-chain reputation and identity passports for autonomous agents." }
+                        { icon: Key, title: t('aiAgents.items.zeroKey.title'), desc: t('aiAgents.items.zeroKey.desc') },
+                        { icon: Coins, title: t('aiAgents.items.unifiedApi.title'), desc: t('aiAgents.items.unifiedApi.desc') },
+                        { icon: Fingerprint, title: t('aiAgents.items.digitalIdentity.title'), desc: t('aiAgents.items.digitalIdentity.desc') }
                     ].map((item, idx) => (
                         <div key={idx} className="group flex items-start gap-4 p-4 border border-transparent hover:border-white/10 hover:bg-white/5 transition-all rounded-md">
                             <div className="mt-1">
@@ -58,7 +63,7 @@ export const AiAgents: React.FC = () => {
                                 <Bot size={24} className="text-white" />
                                 <div className="absolute -top-1 -right-1 w-2 h-2 bg-green-500 rounded-full border border-[#111]"></div>
                             </div>
-                            <div className="text-[10px] font-mono text-gray-500 uppercase bg-black/50 px-2 py-0.5 rounded">Trader_Bot</div>
+                            <div className="text-[10px] font-mono text-gray-500 uppercase bg-black/50 px-2 py-0.5 rounded">{t('aiAgents.diagram.traderBot')}</div>
                         </div>
 
                         {/* Agent 2 */}
@@ -66,7 +71,7 @@ export const AiAgents: React.FC = () => {
                             <div className="w-12 h-12 bg-[#111] border border-white/10 rounded-lg flex items-center justify-center relative z-10 group-hover:border-purple-500/50 transition-colors shadow-lg">
                                 <Shield size={24} className="text-white" />
                             </div>
-                            <div className="text-[10px] font-mono text-gray-500 uppercase bg-black/50 px-2 py-0.5 rounded">Security_AI</div>
+                            <div className="text-[10px] font-mono text-gray-500 uppercase bg-black/50 px-2 py-0.5 rounded">{t('aiAgents.diagram.securityAi')}</div>
                         </div>
 
                         {/* Agent 3 */}
@@ -74,7 +79,7 @@ export const AiAgents: React.FC = () => {
                             <div className="w-12 h-12 bg-[#111] border border-white/10 rounded-lg flex items-center justify-center relative z-10 group-hover:border-yellow-500/50 transition-colors shadow-lg">
                                 <LineChart size={24} className="text-white" />
                             </div>
-                            <div className="text-[10px] font-mono text-gray-500 uppercase bg-black/50 px-2 py-0.5 rounded">Analyst_V2</div>
+                            <div className="text-[10px] font-mono text-gray-500 uppercase bg-black/50 px-2 py-0.5 rounded">{t('aiAgents.diagram.analystV2')}</div>
                         </div>
                     </div>
 
@@ -117,7 +122,7 @@ export const AiAgents: React.FC = () => {
                         <div className="flex gap-4 items-center relative z-10">
                             {/* Block N-1 */}
                             <div className="w-14 h-14 bg-[#0a0a0a] border border-white/5 rounded flex flex-col items-center justify-center opacity-40">
-                                <span className="text-[8px] text-gray-600 mb-1">BLOCK</span>
+                                <span className="text-[8px] text-gray-600 mb-1">{t('aiAgents.diagram.block')}</span>
                                 <span className="text-[8px] text-gray-600 font-mono">#89200</span>
                             </div>
                             
@@ -128,7 +133,7 @@ export const AiAgents: React.FC = () => {
                             <div className="w-24 h-24 bg-[#111] border border-quazar-primary/50 rounded-md flex flex-col items-center justify-center shadow-[0_0_40px_rgba(0,240,255,0.15)] relative">
                                 <div className="absolute -top-3 bg-quazar-primary text-black text-[9px] font-bold px-2 py-0.5 rounded-full shadow-[0_0_10px_rgba(0,240,255,0.5)]">#89201</div>
                                 <Blocks size={32} className="text-white mb-2" />
-                                <div className="text-[9px] font-mono text-quazar-primary animate-pulse">VALIDATING</div>
+                                <div className="text-[9px] font-mono text-quazar-primary animate-pulse">{t('aiAgents.diagram.validating')}</div>
                                 
                                 {/* Ingesting Particles */}
                                 <div className="absolute inset-0 rounded-md border border-quazar-primary/20 animate-ping opacity-20"></div>
@@ -139,14 +144,14 @@ export const AiAgents: React.FC = () => {
 
                             {/* Block N+1 */}
                             <div className="w-14 h-14 bg-[#0a0a0a] border border-white/5 border-dashed rounded flex flex-col items-center justify-center opacity-40">
-                                <span className="text-[8px] text-gray-600 mb-1">NEXT</span>
+                                <span className="text-[8px] text-gray-600 mb-1">{t('aiAgents.diagram.next')}</span>
                                 <div className="w-4 h-4 border border-gray-700 rounded-full border-t-transparent animate-spin"></div>
                             </div>
                         </div>
                         
                         <div className="mt-6 flex items-center gap-2">
                             <div className="w-2 h-2 rounded-full bg-quazar-primary animate-pulse"></div>
-                            <div className="text-xs font-bold text-gray-400 tracking-[0.2em]">QUAZAR CONSENSUS LAYER</div>
+                            <div className="text-xs font-bold text-gray-400 tracking-[0.2em]">{t('aiAgents.diagram.consensusLayer')}</div>
                         </div>
                     </div>
                  </div>

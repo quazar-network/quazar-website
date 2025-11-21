@@ -1,83 +1,60 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { Flag, Code, Zap, Globe, Rocket } from 'lucide-react';
-
-const phases = [
-  {
-    phase: "Phase 1: Genesis",
-    date: "Q3 2025 - Q1 2026",
-    title: "Concept & Architecture",
-    description: "Laying the mathematical foundations for Proof-of-Compute and TEE integrations.",
-    status: "active",
-    icon: Flag,
-    items: [
-      "Whitepaper Release",
-      "Mathematical Proof of Consensus",
-      "Core Architecture Design",
-      "Seed Funding Round"
-    ]
-  },
-  {
-    phase: "Phase 2: Development",
-    date: "Q2 2026 - Q4 2026",
-    title: "Core Engine Construction",
-    description: "Building the initial node infrastructure and AI integration layers.",
-    status: "upcoming",
-    icon: Code,
-    items: [
-      "Quazar Engine v1.0",
-      "Internal Alpha Testing",
-      "Wallet Integration (FaceID)",
-      "Smart Contract Audits (Preliminary)"
-    ]
-  },
-  {
-    phase: "Phase 3: Nebula",
-    date: "Q1 2027 - Q2 2027",
-    title: "Incentivized Testnet",
-    description: "Public onboarding of GPU miners and stress testing the network with real AI workloads.",
-    status: "upcoming",
-    icon: Zap,
-    items: [
-      "Public Testnet Launch",
-      "Miner Onboarding Program",
-      "Bug Bounty Campaign",
-      "AI Model Registry Beta"
-    ]
-  },
-  {
-    phase: "Phase 4: Supernova",
-    date: "Q3 2027 - Q4 2027",
-    title: "Mainnet Launch",
-    description: "Full network genesis. The decentralized AI era is live.",
-    status: "upcoming",
-    icon: Rocket,
-    items: [
-      "Genesis Block Mined",
-      "Token Generation Event (TGE)",
-      "Governance DAO Launch",
-      "Exchange Listings"
-    ]
-  },
-  {
-    phase: "Phase 5: Expansion",
-    date: "2028 & Beyond",
-    title: "Ecosystem Scaling",
-    description: "Cross-chain interoperability and massive scaling of compute power.",
-    status: "upcoming",
-    icon: Globe,
-    items: [
-      "Cross-chain Bridges (IBC)",
-      "Advanced LLM Training Clusters",
-      "Developer Grant Program v2",
-      "Decentralized Vector Storage"
-    ]
-  }
-];
+import { useTranslation, Trans } from 'react-i18next';
 
 export const Roadmap: React.FC = () => {
+  const { t } = useTranslation();
   const containerRef = useRef<HTMLDivElement>(null);
   const [lineHeight, setLineHeight] = useState(0);
   const [visibleItems, setVisibleItems] = useState<number[]>([]);
+
+  const phases = [
+    {
+      phase: t('roadmap.phases.genesis.phase'),
+      date: "Q3 2025 - Q1 2026",
+      title: t('roadmap.phases.genesis.title'),
+      description: t('roadmap.phases.genesis.desc'),
+      status: "active",
+      icon: Flag,
+      items: t('roadmap.phases.genesis.items', { returnObjects: true }) as string[]
+    },
+    {
+      phase: t('roadmap.phases.development.phase'),
+      date: "Q2 2026 - Q4 2026",
+      title: t('roadmap.phases.development.title'),
+      description: t('roadmap.phases.development.desc'),
+      status: "upcoming",
+      icon: Code,
+      items: t('roadmap.phases.development.items', { returnObjects: true }) as string[]
+    },
+    {
+      phase: t('roadmap.phases.nebula.phase'),
+      date: "Q1 2027 - Q2 2027",
+      title: t('roadmap.phases.nebula.title'),
+      description: t('roadmap.phases.nebula.desc'),
+      status: "upcoming",
+      icon: Zap,
+      items: t('roadmap.phases.nebula.items', { returnObjects: true }) as string[]
+    },
+    {
+      phase: t('roadmap.phases.supernova.phase'),
+      date: "Q3 2027 - Q4 2027",
+      title: t('roadmap.phases.supernova.title'),
+      description: t('roadmap.phases.supernova.desc'),
+      status: "upcoming",
+      icon: Rocket,
+      items: t('roadmap.phases.supernova.items', { returnObjects: true }) as string[]
+    },
+    {
+      phase: t('roadmap.phases.expansion.phase'),
+      date: "2028 & Beyond",
+      title: t('roadmap.phases.expansion.title'),
+      description: t('roadmap.phases.expansion.desc'),
+      status: "upcoming",
+      icon: Globe,
+      items: t('roadmap.phases.expansion.items', { returnObjects: true }) as string[]
+    }
+  ];
 
   // Handle Line Drawing Logic
   useEffect(() => {
@@ -146,11 +123,11 @@ export const Roadmap: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center mb-20">
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-            Journey to <span className="text-quazar-primary">Mainnet</span>
+            <Trans i18nKey="roadmap.title" components={{ 1: <span className="text-quazar-primary" /> }} />
           </h2>
           <div className="h-1 w-24 bg-gradient-to-r from-quazar-primary to-purple-600 mx-auto rounded-full"></div>
           <p className="mt-6 text-gray-400 max-w-2xl mx-auto text-lg">
-            We are currently in the <span className="text-white font-bold">Genesis</span> phase. Building the foundation of decentralized AI.
+            <Trans i18nKey="roadmap.subtitle" components={{ 1: <span className="text-white font-bold" /> }} />
           </p>
         </div>
 

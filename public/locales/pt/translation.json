@@ -1,0 +1,652 @@
+{
+  "app": {
+    "title": "Quazar",
+    "metaTitle": "QUAZAR | Blockchain, Rede de GPU Descentralizada e Infraestrutura de IA",
+    "metaDescription": "Quazar é uma blockchain de alto desempenho e uma rede de GPU descentralizada para finanças autônomas (DeFi) e IA com privacidade."
+  },
+  "navbar": {
+    "technology": "Tecnologia",
+    "ecosystem": "Ecossistema",
+    "aiAgents": "Agentes de IA",
+    "protocol": "Protocolo",
+    "roadmap": "Roteiro",
+    "launchApp": "Iniciar App",
+    "selectLanguage": "Selecionar Idioma"
+  },
+  "hero": {
+    "fullText": "Quazar é uma rede de GPU descentralizada que combina o poder das finanças autônomas, IA segura com privacidade e infraestrutura blockchain robusta.",
+    "futureDepin": "O Futuro da DePIN",
+    "blockchainFor": "BLOCKCHAIN PARA",
+    "defiAi": "DEFI & COMPUTAÇÃO DE IA",
+    "whitepaper": "Whitepaper",
+    "comingSoon": "Em Breve...",
+    "startMining": "Começar a Minerar",
+    "stats": {
+      "usefulCompute": "Computação Útil",
+      "miningSupplyValue": "3 Bi",
+      "qzarMining": "QZAR Para Mineração",
+      "privacyStandard": "Padrão de Privacidade",
+      "blockTime": "Tempo de Bloco"
+    }
+  },
+  "features": {
+    "title": "Tecnologia Central",
+    "subtitle": "Fundindo computação de alto desempenho com arquitetura blockchain de próxima geração.",
+    "items": {
+      "abstractAccounts": {
+        "title": "Contas Abstratas",
+        "desc": "Cada carteira é um contrato inteligente. Login com Email, Redes Sociais ou FaceID. Sem necessidade de frases semente. Possui sistemas robustos de recuperação e plugins."
+      },
+      "autonomousContracts": {
+        "title": "Contratos Autônomos",
+        "desc": "Contratos inteligentes que executam automaticamente com base no tempo ou eventos. Perfeito para pagamentos recorrentes, auto-trading e distribuição de salários."
+      },
+      "dataPrivacy": {
+        "title": "Privacidade de Dados",
+        "desc": "Utilizando TEE (Ambientes de Execução Confiáveis) para criptografar prompts e dados do usuário. Seus dados permanecem criptografados mesmo durante o processamento."
+      },
+      "aiTraining": {
+        "title": "Treinamento e Inferência de IA",
+        "desc": "Uma rede descentralizada onde usuários treinam ou interagem com modelos de IA rodando em GPUs de mineradores. Consenso baseado em poder de computação."
+      }
+    }
+  },
+  "targetAudience": {
+    "title": "Construído para <1>Toda a Economia</1>",
+    "subtitle": "Conectando oferta e demanda em um mercado de alto desempenho e sem permissão.",
+    "items": {
+      "startup": {
+        "title": "Startups de IA e Inovadores",
+        "headline": "Lance seu produto de IA em dias, não meses.",
+        "desc": "Acesse clusters H100 de nível empresarial sem o gasto massivo de capital. Escale sua infraestrutura de inferência perfeitamente à medida que sua base de usuários cresce, pagando apenas pelo que usar."
+      },
+      "enterprise": {
+        "title": "Escala Empresarial",
+        "headline": "Reduza os custos de computação em 50-60%.",
+        "desc": "Execute cargas de trabalho de inferência e treinamento seguras em nós protegidos por TEE através de uma API simples. Escale a capacidade de computação instantaneamente sem a sobrecarga de gerenciar hardware ou clusters."
+      },
+      "provider": {
+        "title": "Provedores de Computação",
+        "headline": "Transforme suas GPUs em uma fonte de receita.",
+        "desc": "Conecte suas GPUs de consumo ou rigs de mineração à grade Quazar. Monetize seu hardware ocioso impulsionando cargas de trabalho de IA descentralizadas e ganhe QZAR com pagamentos automatizados."
+      }
+    }
+  },
+  "ecosystem": {
+    "title": "O Ecossistema",
+    "subtitle": "Construído para todos que participam da economia de IA.",
+    "tabs": {
+      "user": "Para Usuários",
+      "miner": "Para Mineradores",
+      "dev": "Para Desenvolvedores"
+    },
+    "wallet": {
+      "totalBalance": "Saldo Total",
+      "send": "Enviar",
+      "receive": "Receber",
+      "assets": "Ativos",
+      "viewAll": "Ver Tudo",
+      "assistant": "Assistente Quazar",
+      "assistantMsg": "Verificação de portfólio completa. Volatilidade é baixa. Ação recomendada: Reequilibrar alocação de ETH.",
+      "execute": "Executar",
+      "dismiss": "Dispensar"
+    },
+    "devMockup": {
+      "title": "AGENT_DEPLOY.SH",
+      "initializing": "INICIALIZANDO",
+      "compiling": "COMPILANDO_LOGICA",
+      "minting": "CUNHANDO_PASSAPORTE_NFT",
+      "provisioning": "PROVISIONANDO_CARTEIRA"
+    },
+    "content": {
+      "user": {
+        "title": "A Carteira Quazar",
+        "desc": "Um portal para finanças descentralizadas de IA sem a complexidade.",
+        "features": [
+          "Acesso a modelos de IA cripto ajustados",
+          "Assinatura de transação com FaceID",
+          "Reequilíbrio automatizado de portfólio",
+          "Recursos bancários: Pagamentos recorrentes e Limites",
+          "Conversão de ativos com um clique"
+        ]
+      },
+      "miner": {
+        "title": "Mineração GPU e Inferência",
+        "desc": "Monetize seu hardware impulsionando a próxima geração de IA.",
+        "features": [
+          "Mine QZAR verificando seu poder de GPU",
+          "Ganhe QZAR por tarefas de treinamento e inferência de IA",
+          "Recompensas por validação de bloco",
+          "95% dos recursos vão para computação útil",
+          "Sistema baseado em reputação",
+          "Fácil integração de hardware"
+        ]
+      },
+      "dev": {
+        "title": "Construa Agentes de IA e dApps",
+        "desc": "Uma plataforma unificada para desenvolvedores implantarem agentes autônomos.",
+        "features": [
+          "Interface API padrão compatível com OpenAI",
+          "Delegue o controle da carteira a agentes de IA com segurança",
+          "API unificada para monetização",
+          "Construa bots de trading e assistentes de pesquisa",
+          "Passaportes digitais para Agentes de IA"
+        ]
+      }
+    }
+  },
+  "aiAgents": {
+    "swarmIntelligence": "Inteligência de Enxame",
+    "title": "<1/> <2>Infraestrutura de Agentes</2> Autônoma",
+    "desc": "Implante agentes autônomos unindo modelos de IA e contratos inteligentes. Habilite colaboração direta on-chain e monetização.",
+    "items": {
+      "zeroKey": {
+        "title": "Delegação Zero-Key",
+        "desc": "Permissões de Conta Abstrata sem exposição de chave privada."
+      },
+      "unifiedApi": {
+        "title": "Economia API Unificada",
+        "desc": "Interface de monetização padronizada para todas as interações de agentes."
+      },
+      "digitalIdentity": {
+        "title": "Identidade Digital",
+        "desc": "Reputação on-chain e passaportes de identidade para agentes autônomos."
+      }
+    },
+    "diagram": {
+      "traderBot": "Trader_Bot",
+      "securityAi": "Segurança_IA",
+      "analystV2": "Analista_V2",
+      "block": "BLOCO",
+      "next": "PRÓXIMO",
+      "validating": "VALIDANDO",
+      "consensusLayer": "CAMADA DE CONSENSO QUAZAR"
+    }
+  },
+  "miningDemo": {
+    "systemArchitecture": "Arquitetura do Sistema",
+    "title": "Prova de Computação",
+    "desc": "Usuários pagam QZAR para solicitar inferência. Nós utilizam ciclos de GPU para executar a carga de trabalho, e as recompensas são distribuídas para mineradores e validadores apenas após a verificação de consenso.",
+    "status": {
+      "online": "REDE ONLINE",
+      "latency": "LATÊNCIA: 12ms"
+    },
+    "dashboard": {
+      "nodeId": "ID_NÓ: QZ-8829-ALPHA",
+      "ingestStream": "Fluxo de Ingestão",
+      "currentBatch": "LOTE ATUAL",
+      "pendingBatch": "LOTE PENDENTE",
+      "waiting": "0xAGUARDANDO...",
+      "bufferCapacity": "CAPACIDADE DO BUFFER",
+      "inferenceEngine": "Motor de Inferência",
+      "processingTensors": "PROCESSANDO TENSORES",
+      "systemLogs": "Logs do Sistema",
+      "estimatedReward": "RECOMPENSA ESTIMADA",
+      "actions": {
+        "allocating": "ALOCANDO_TENSORES",
+        "verifying": "VERIFICANDO_ZKP",
+        "computing": "CALCULANDO_GRADIENTES",
+        "syncing": "SINCRONIZANDO_ESTADO"
+      }
+    }
+  },
+  "protocol": {
+    "title": "O Protocolo <1>Quazar</1>",
+    "subtitle": "Um motor de consenso verificável projetado para cargas de trabalho de IA não determinísticas.",
+    "steps": {
+      "routing": {
+        "title": "Roteamento e Montagem de Tarefas",
+        "desc": "A solicitação do usuário é roteada via relay para um nó aleatório. Após a inferência, a prova e as assinaturas são empacotadas em uma transação."
+      },
+      "multiSig": {
+        "title": "Multi-Assinatura",
+        "desc": "O Minerador assina a inferência concluída. 2-3 Validadores aleatórios verificam o resultado e adicionam suas assinaturas."
+      },
+      "consensus": {
+        "title": "Consenso",
+        "desc": "O bloco é finalizado. O protocolo valida as provas de computação e garante que o limite de consenso seja alcançado."
+      },
+      "settlement": {
+        "title": "Liquidação Atômica",
+        "desc": "O contrato inteligente é acionado. QZAR é deduzido do Usuário e distribuído para o Minerador e Validadores instantaneamente."
+      }
+    },
+    "diagram": {
+      "user": "USUÁRIO",
+      "block": "BLOCO",
+      "txHash": "TX_HASH",
+      "consensus": "CONSENSO",
+      "miner": "MINERADOR",
+      "validators": "VALIDADORES"
+    }
+  },
+  "developers": {
+    "sdkApi": "SDK e API",
+    "title": "<1>Ambiente</1> de Desenvolvedor",
+    "desc": "Integração perfeita. Conecte-se diretamente aos nós Quazar usando nossa <1>interface compatível com OpenAI</1>. Execute inferência de IA descentralizada simplesmente apontando seu cliente para o endpoint da rede Quazar.",
+    "features": {
+      "interface": {
+        "title": "Interface Adaptada",
+        "desc": "Fork personalizado da especificação API da OpenAI, reengenheirado para suportar roteamento descentralizado e verificação de consenso."
+      },
+      "verification": {
+        "title": "Inferência Verificável",
+        "desc": "Saídas verificadas criptograficamente através do Protocolo de Consenso Quazar."
+      }
+    },
+    "readDocs": "Ler Documentação",
+    "code": {
+      "comment1": "# Inicializar conexão com a Rede Quazar",
+      "comment2": "# Executar inferência em nós descentralizados",
+      "response": "Resposta"
+    },
+    "terminal": {
+      "title": "Saída do Terminal",
+      "resolving": "Resolvendo malha descentralizada... OK",
+      "handshake": "Handshake id_no=QZ-882... OK",
+      "response": "Resposta: Prova-de-Computação é um mecanismo de consenso onde mineradores validam blocos realizando inferência útil de IA..."
+    }
+  },
+  "roadmap": {
+    "title": "Jornada para a <1>Mainnet</1>",
+    "subtitle": "Atualmente estamos na fase <1>Gênese</1>. Construindo a fundação da IA descentralizada.",
+    "phases": {
+      "genesis": {
+        "phase": "Fase 1: Gênese",
+        "title": "Conceito e Arquitetura",
+        "desc": "Estabelecendo as fundações matemáticas para Prova-de-Computação e integrações TEE.",
+        "items": [
+          "Lançamento do Whitepaper",
+          "Prova Matemática de Consenso",
+          "Design de Arquitetura Central",
+          "Rodada de Financiamento Semente"
+        ]
+      },
+      "development": {
+        "phase": "Fase 2: Desenvolvimento",
+        "title": "Construção do Motor Central",
+        "desc": "Construindo a infraestrutura inicial de nós e camadas de integração de IA.",
+        "items": [
+          "Motor Quazar v1.0",
+          "Testes Alfa Internos",
+          "Integração de Carteira (FaceID)",
+          "Auditorias de Contratos Inteligentes (Preliminares)"
+        ]
+      },
+      "nebula": {
+        "phase": "Fase 3: Nebula",
+        "title": "Testnet Incentivada",
+        "desc": "Integração pública de mineradores GPU e testes de estresse da rede com cargas de trabalho reais de IA.",
+        "items": [
+          "Lançamento da Testnet Pública",
+          "Programa de Integração de Mineradores",
+          "Campanha de Bug Bounty",
+          "Beta do Registro de Modelos de IA"
+        ]
+      },
+      "supernova": {
+        "phase": "Fase 4: Supernova",
+        "title": "Lançamento Mainnet",
+        "desc": "Gênese completa da rede. A era da IA descentralizada está ao vivo.",
+        "items": [
+          "Bloco Gênese Minerado",
+          "Evento de Geração de Token (TGE)",
+          "Lançamento de Governança DAO",
+          "Listagens em Exchanges"
+        ]
+      },
+      "expansion": {
+        "phase": "Fase 5: Expansão",
+        "title": "Escalabilidade do Ecossistema",
+        "desc": "Interoperabilidade cross-chain e escalabilidade massiva de poder de computação.",
+        "items": [
+          "Pontes Cross-chain (IBC)",
+          "Clusters Avançados de Treinamento LLM",
+          "Programa de Subsídios para Desenvolvedores v2",
+          "Armazenamento Vetorial Descentralizado"
+        ]
+      }
+    }
+  },
+  "footer": {
+    "copyright": "© 2025 Rede Quazar. Todos os direitos reservados.",
+    "privacy": "Política de Privacidade",
+    "terms": "Termos de Uso",
+    "cookies": "Aviso de Cookies"
+  },
+  "cookieConsent": {
+    "title": "Valorizamos sua privacidade",
+    "desc": "Usamos cookies para melhorar sua experiência de navegação, servir conteúdo personalizado e analisar nosso tráfego. Ao clicar em \"Aceitar Tudo\", você consente com nosso uso de cookies. Você pode gerenciar suas preferências ou retirar o consentimento a qualquer momento. Leia nosso <1>Aviso de Cookies</1> e <2>Política de Privacidade</2>.",
+    "necessary": "Apenas Necessários",
+    "accept": "Aceitar Tudo"
+  },
+  "termsOfUse": {
+    "title": "Termos de Uso",
+    "lastUpdated": "Última Atualização: Novembro 2025",
+    "intro": "Ao acessar e usar o site e materiais de <1>https://quazar.io</1> doravante referido como “QUAZAR”, você reconhece e concorda em cumprir os seguintes Termos de Uso. Se você não concordar com estes Termos, não use o site nem baixe quaisquer Materiais.",
+    "sections": {
+      "scope": {
+        "title": "Escopo dos Termos",
+        "p1": "Estes Termos de Uso aplicam-se a todos os sites da QUAZAR, seja um site patrocinado, gerenciado por um fornecedor terceirizado ou hospedado por um terceiro (referido doravante como os \"Sites\"). Estes Termos também se aplicam a quaisquer recursos e ferramentas fornecidos através dos sites https://quazar.io, incluindo, mas não se limitando a ferramentas para desenvolvedores, áreas de download, áreas de pesquisa, fóruns comunitários, salas de chat, blogs, sites de compartilhamento e informações sobre produtos. Estes Termos se aplicam a todos os Sites https://quazar.io, tanto agora quanto no futuro. Doravante, todos os materiais cobertos por estes Termos de Uso serão referidos como os \"Materiais\".",
+        "p2": "https://quazar.io pode fornecer Termos de Serviço específicos para atividades ou programas, por exemplo, ao fornecer Materiais interativos e/ou habilitar Conteúdo Gerado pelo Usuário. Se for o caso, na medida em que estes Termos não entrem em conflito com os Termos de Serviço específicos do programa, os Termos aqui contidos permanecem em pleno vigor e efeito."
+      },
+      "security": {
+        "title": "Segurança e Privacidade",
+        "items": [
+          "<1>Informações Pessoais:</1> Informações enviadas para https://quazar.io através de formulários no Site ou Materiais são regidas de acordo com a Política de Privacidade da QUAZAR.",
+          "<1>Conta de Membro, Senha e Segurança:</1> A QUAZAR pode, de tempos em tempos, hospedar um site específico para um programa ou atividade que pode exigir que você estabeleça uma conta de membro e/ou senha do site. Nesses casos, você é inteiramente responsável por manter a confidencialidade de sua senha e conta. Além disso, você é inteiramente responsável por quaisquer atividades que ocorram sob sua conta. Você concorda em notificar a QUAZAR imediatamente sobre qualquer uso não autorizado de sua conta ou qualquer outra violação de segurança aqui. https://quazar.io não será responsável por qualquer perda que você possa incorrer como resultado de outra pessoa usar sua senha ou conta, seja com ou sem o seu conhecimento. No entanto, você pode ser responsabilizado por perdas incorridas por https://quazar.io ou outra parte devido a outra pessoa usar sua conta ou senha. Você não pode usar a conta de outra pessoa em nenhum momento, sem a permissão do titular da conta."
+        ]
+      },
+      "decentralized": {
+        "title": "Serviços Descentralizados de Computação e IA",
+        "intro": "QUAZAR fornece um mercado descentralizado para poder de computação GPU e inferência de IA. Os usuários reconhecem que:",
+        "items": [
+          "QUAZAR é um protocolo não custodial. Não temos custódia ou controle sobre as GPUs, os modelos de IA executados nelas ou os dados processados por nós independentes.",
+          "A disponibilidade de recursos de computação está sujeita à oferta e demanda da rede.",
+          "Você é o único responsável pelo conteúdo, código e dados que você transmite para a rede."
+        ]
+      },
+      "useTerms": {
+        "title": "Termos de Uso",
+        "noLicense": "<1>Sem Licença:</1> A menos que especificado de outra forma nos próprios Materiais, você não pode modificar, copiar, distribuir, transmitir, exibir, executar, reproduzir, publicar, licenciar, criar trabalhos derivados, transferir ou vender qualquer informação, software, produtos ou serviços obtidos dos Sites. Você não pode usar ou facilitar o uso deste site ou de quaisquer Materiais em conexão com qualquer análise de violação referente aos produtos QUAZAR. Pelo seu uso deste site ou de quaisquer Materiais, você concorda em conceder à https://quazar.io uma licença não exclusiva e isenta de royalties para qualquer reivindicação de patente redigida posteriormente que inclua assunto divulgado neste site.",
+        "noUnlawful": "Nenhum Uso Ilegal ou Proibido:",
+        "noUnlawfulDesc": "Você concorda que não usará os Sites ou Materiais para qualquer propósito que seja ilegal ou proibido por estes Termos de Uso. Você não pode:",
+        "items": [
+          "Carregar, postar, enviar por e-mail, transmitir ou de outra forma disponibilizar qualquer conteúdo que seja ilegal, prejudicial, ameaçador, abusivo, assediador, tortuoso, difamatório, vulgar, obsceno, calunioso, invasivo da privacidade de outrem, odioso, ou racialmente, etnicamente ou de outra forma censurável;",
+          "Usar os Sites, Materiais, Serviços ou atividades para \"perseguir\" ou de outra forma assediar ou prejudicar outro;",
+          "Fazer-se passar por qualquer pessoa ou entidade, incluindo, mas não se limitando a, um funcionário da QUAZAR, líder de fórum, guia ou anfitrião, ou declarar falsamente ou de outra forma deturpar sua afiliação com uma pessoa ou entidade ou coletar ou armazenar dados pessoais sobre outros usuários em conexão com a conduta e atividades proibidas;",
+          "Falsificar cabeçalhos ou manipular identificadores para disfarçar a origem de qualquer conteúdo transmitido através do Site ou Materiais;",
+          "Carregar, postar, enviar por e-mail, transmitir ou de outra forma disponibilizar qualquer conteúdo que você não tenha o direito de disponibilizar sob qualquer lei ou relações contratuais ou fiduciárias (como informações privilegiadas, informações proprietárias e confidenciais aprendidas ou divulgadas como parte de relações de trabalho ou sob acordos de não divulgação);",
+          "Carregar, postar, enviar por e-mail, transmitir ou de outra forma disponibilizar qualquer conteúdo que infrinja qualquer patente, marca registrada, segredo comercial, direitos autorais ou outros direitos de propriedade (\"Direitos\") de qualquer parte;",
+          "Carregar, postar, enviar por e-mail, transmitir ou de outra forma disponibilizar qualquer publicidade não solicitada ou não autorizada, materiais promocionais, \"lixo eletrônico\", \"spam\", \"correntes\", \"esquemas de pirâmide\" ou qualquer outra forma de solicitação;",
+          "Carregar, postar, enviar por e-mail, transmitir ou de outra forma disponibilizar qualquer material que contenha vírus de software ou qualquer outro código de computador, arquivos ou programas projetados para interromper, destruir ou limitar a funcionalidade de qualquer software ou hardware de computador, ou equipamento de telecomunicações;",
+          "Usar o Site ou Materiais de qualquer maneira que possa danificar, desativar, sobrecarregar ou prejudicar qualquer servidor da QUAZAR, ou conexões de rede(s), desobedecer a quaisquer requisitos, procedimentos, políticas ou regulamentos de redes conectadas ao Site ou Materiais, ou interferir no uso e aproveitamento de qualquer outra parte dos Sites ou Materiais;",
+          "Tentar obter acesso não autorizado a qualquer Site ou Material, outras contas, sistemas de computador ou redes conectadas a qualquer servidor ou Materiais da QUAZAR, através de hacking, mineração de senha ou qualquer outro meio ou obter ou tentar obter quaisquer materiais ou informações através de quaisquer meios não intencionalmente disponibilizados através dos Sites ou Materiais;",
+          "Violar intencionalmente ou não qualquer lei local, estadual, nacional ou internacional aplicável, incluindo, mas não se limitando a, regulamentos promulgados pela Comissão de Valores Mobiliários dos EUA, quaisquer regras de qualquer bolsa nacional ou outra bolsa de valores, e quaisquer regulamentos com força de lei; e/ou",
+          "Fornecer apoio material ou recursos (ou ocultar ou disfarçar a natureza, localização, fonte ou propriedade do apoio material ou recursos) a qualquer organização(ões) designada(s) pelo governo dos Estados Unidos como uma organização terrorista estrangeira de acordo com a seção 219 da Lei de Imigração e Nacionalidade."
+        ]
+      },
+      "copyright": {
+        "title": "Permissão de Direitos Autorais",
+        "desc": "Os direitos autorais de todo o conteúdo postado em https://quazar.io., e todos os sites conectados são de propriedade da QUAZAR. O uso é autorizado apenas para fins editoriais (mídia de notícias) e está sujeito aos Termos de Uso da Web da QUAZAR. Para solicitar permissão para usar conteúdo fora de fins editoriais, envie sua solicitação por e-mail para nosso endereço de contato."
+      },
+      "notices": {
+        "title": "Avisos e Divulgações",
+        "warranty": {
+          "title": "Exclusões de Garantia",
+          "desc": "VOCÊ ENTENDE E CONCORDA EXPRESSAMENTE QUE: SEU USO DOS SITES E MATERIAIS É POR SUA CONTA E RISCO E QUE OS SERVIÇOS SÃO FORNECIDOS \"NO ESTADO EM QUE SE ENCONTRAM\" E \"CONFORME DISPONÍVEIS\" SEM QUALQUER GARANTIA EXPRESSA OU IMPLÍCITA DE QUALQUER TIPO, INCLUINDO GARANTIAS DE COMERCIALIZAÇÃO, NÃO VIOLAÇÃO DE PROPRIEDADE INTELECTUAL DA QUAZAR, OU ADEQUAÇÃO A UM DETERMINADO FIM. QUALQUER MATERIAL BAIXADO OU OBTIDO DE OUTRA FORMA ATRAVÉS DO USO DOS SERVIÇOS É FEITO A SEU PRÓPRIO CRITÉRIO E RISCO E VOCÊ SERÁ O ÚNICO RESPONSÁVEL POR QUALQUER DANO AO SEU SISTEMA DE COMPUTADOR OU OUTRO DISPOSITIVO OU PERDA DE DADOS QUE RESULTE DO DOWNLOAD DE TAL MATERIAL. EM NENHUM CASO A QUAZAR OU SEUS FORNECEDORES SERÃO RESPONSÁVEIS POR QUAISQUER DANOS (INCLUINDO, SEM LIMITAÇÃO, DANOS POR PERDA DE LUCROS, INTERRUPÇÃO DE NEGÓCIOS OU PERDA DE INFORMAÇÕES) DECORRENTES DO USO OU DA INCAPACIDADE DE USAR OS SITES OU MATERIAIS, MESMO QUE A QUAZAR TENHA SIDO AVISADA DA POSSIBILIDADE DE TAIS DANOS. COMO ALGUMAS JURISDIÇÕES PROÍBEM A EXCLUSÃO OU LIMITAÇÃO DE RESPONSABILIDADE POR DANOS CONSEQUENCIAIS OU INCIDENTAIS, A LIMITAÇÃO ACIMA PODE NÃO SE APLICAR A VOCÊ."
+        },
+        "liability": {
+          "title": "Limitação de Responsabilidade",
+          "desc": "VOCÊ ENTENDE E CONCORDA EXPRESSAMENTE QUE EM NENHUM CASO A QUAZAR E/OU SEUS RESPECTIVOS FORNECEDORES SERÃO RESPONSÁVEIS POR QUAISQUER DANOS ESPECIAIS, INDIRETOS OU CONSEQUENCIAIS OU QUAISQUER DANOS RESULTANTES DE PERDA DE USO, DADOS OU LUCROS, SEJA EM UMA AÇÃO DE CONTRATO, NEGLIGÊNCIA OU OUTRA AÇÃO DELITUOSA, DECORRENTE DE OU EM CONEXÃO COM O USO OU DESEMPENHO DE QUALQUER SOFTWARE, DOCUMENTOS, FORNECIMENTO OU FALHA NO FORNECIMENTO DE SERVIÇOS, OU INFORMAÇÕES DISPONÍVEIS NO SITE. QUALQUER PERDA OU DANO QUE POSSA SER INCORRIDO POR VOCÊ, INCLUINDO, MAS NÃO SE LIMITANDO A PERDA OU DANO COMO RESULTADO DE QUALQUER CONFIANÇA COLOCADA POR VOCÊ NA INTEGRIDADE, PRECISÃO OU EXISTÊNCIA DE QUALQUER CONTEÚDO, OU QUAISQUER ALTERAÇÕES QUE A QUAZAR POSSA FAZER AOS SERVIÇOS, DOCUMENTOS, SITE, CONTEÚDO OU POR QUALQUER CESSAÇÃO PERMANENTE OU TEMPORÁRIA NO FORNECIMENTO DO SITE (OU QUALQUER RECURSO DENTRO DOS SITES); OU SE APLICÁVEL, SUA FALHA EM MANTER SUA SENHA OU DETALHES DA CONTA SEGUROS E CONFIDENCIAIS; ESTAS LIMITAÇÕES NA RESPONSABILIDADE DA QUAZAR SE APLICARÃO INDEPENDENTEMENTE DE A QUAZAR TER SIDO AVISADA OU DEVERIA ESTAR CIENTE DA POSSIBILIDADE DE TAIS PERDAS. UMA DECLARAÇÃO DE DIVULGAÇÃO DE RISCOS ESTÁ DISPONÍVEL NO SITE E É PARTE INTEGRANTE DESTES TERMOS DE USO."
+        }
+      },
+      "indemnification": {
+        "title": "Indenização",
+        "desc": "Você concorda em indenizar e isentar a QUAZAR e seus executivos, agentes, funcionários, parceiros e licenciadores de qualquer reclamação ou demanda, incluindo honorários advocatícios razoáveis, feita por qualquer terceiro devido a ou decorrente do conteúdo que você enviar, postar, transmitir ou disponibilizar de outra forma através dos Sites ou Materiais, seu uso dos Sites ou Materiais, sua conexão aos Sites ou Materiais, sua violação destes Termos de Uso ou Termos de Uso específicos do site, ou sua violação de quaisquer direitos de outrem."
+      },
+      "accuracy": {
+        "title": "Precisão e Integridade",
+        "p1": "A QUAZAR não garante a precisão ou integridade das informações, textos, gráficos, links ou outros itens contidos nos Sites ou Materiais.",
+        "changes": "<1>Alterações e Atualizações:</1> A QUAZAR reserva-se o direito de modificar ou descontinuar, temporária ou permanentemente, Sites ou Materiais (ou qualquer parte deles) com ou sem aviso prévio. A QUAZAR pode fazer alterações nos Sites ou Materiais, ou nos produtos descritos neles, a qualquer momento sem aviso prévio. A QUAZAR não se compromete a atualizar os Sites ou Materiais.",
+        "forward": "<1>Declarações Prospectivas:</1> Algumas das informações neste Site podem conter projeções ou outras declarações prospectivas sobre eventos futuros ou o desempenho financeiro futuro da QUAZAR. Palavras como \"espera\", \"metas\", \"planeja\", \"acredita\", \"continua\" e \"pode\", e variações de tais palavras e expressões semelhantes identificam declarações prospectivas. Além disso, quaisquer declarações que se refiram a ou possam implicar desempenho financeiro futuro, crescimento antecipado, tendências em nossos negócios e outras caracterizações de eventos ou circunstâncias futuras são declarações prospectivas. Todas essas declarações que não são fatos históricos são baseadas em nossas expectativas atuais e estão sujeitas a uma série de riscos e incertezas, e os eventos ou resultados reais podem diferir materialmente."
+      },
+      "contentNotices": {
+        "title": "Avisos Relacionados ao Conteúdo",
+        "ownership": "<1>Propriedade:</1> Você reconhece e concorda que a QUAZAR detém todos os direitos legais, títulos e interesses nos e para os Materiais e Sites, incluindo quaisquer nomes comerciais, marcas registradas, marcas de serviço, logotipos, nomes de domínio e outras características distintivas da marca QUAZAR neles (independentemente de esses direitos estarem registrados ou não, e onde quer que existam no mundo), e que eles são protegidos por leis mundiais de direitos autorais e disposições de tratados. Eles não podem ser copiados, reproduzidos, modificados, publicados, carregados, postados, transmitidos ou distribuídos de qualquer forma sem a permissão prévia por escrito da QUAZAR. Exceto conforme expressamente previsto neste documento, a QUAZAR não concede nenhum direito expresso ou implícito a você sob quaisquer patentes, direitos autorais, marcas registradas ou informações de segredo comercial.",
+        "translations": "<1>Traduções:</1> Onde a QUAZAR forneceu a você uma tradução da versão em inglês destes Termos de Uso, você concorda que a tradução é fornecida apenas para sua conveniência e que as versões em inglês dos Termos de Uso regerão seu relacionamento com a QUAZAR. Se houver qualquer contradição entre a versão em inglês dos Termos de Uso e a tradução, a versão em inglês prevalecerá.",
+        "thirdParty": "<1>Conteúdo de Terceiros:</1> Sites e Materiais podem conter conteúdo enviado por usuários ou terceiros; tal conteúdo não é revisado, aprovado ou endossado pela QUAZAR e é fornecido apenas como uma conveniência para nossos clientes e usuários. Sob nenhuma circunstância a QUAZAR será responsável de qualquer forma por qualquer conteúdo enviado ou fornecido por terceiros. QUALQUER MATERIAL BAIXADO OU OBTIDO DE OUTRA FORMA ATRAVÉS DO USO DOS MATERIAIS É FEITO A SEU PRÓPRIO CRITÉRIO E RISCO."
+      },
+      "userContent": {
+        "title": "Envios de Conteúdo do Usuário",
+        "definition": "<1>Definição:</1> Envios de conteúdo do usuário podem incluir, mas não se limitam a, registro de usuário, participação, compartilhamento público, postagem, upload, link, download e transferência, visualização, blog, comentários, participação em sala de chat, quadro de avisos e fórum, ou envio ou transmissão de conteúdo (o \"Conteúdo do Usuário\") em qualquer site.",
+        "nonEndorsement": "<1>Não Endosso:</1> A QUAZAR não endossa qualquer Conteúdo do Usuário ou qualquer opinião, recomendação ou conselho expresso nele, e a QUAZAR isenta-se expressamente de qualquer responsabilidade em conexão com envios de Conteúdo do Usuário. A QUAZAR não permite atividades de violação de direitos autorais e violação de direitos de propriedade intelectual em seus Sites. A QUAZAR reserva-se o direito de remover Conteúdo do Usuário a seu exclusivo critério e sem aviso prévio.",
+        "ownership": "<1>Propriedade:</1> A QUAZAR não reivindica a propriedade de qualquer Conteúdo do Usuário enviado. A menos que acordado de outra forma por escrito, não há compensação pelo Conteúdo do Usuário.",
+        "license": "<1>Licença:</1> Ao postar, exibir, carregar, inserir, fornecer ou enviar tal conteúdo do usuário, você concede à QUAZAR, aos sublicenciados necessários e aos usuários do Site, uma licença perpétua, irrevogável e totalmente sublicenciável para usar em todo o mundo, isenta de royalties e não exclusiva, para usar, distribuir, reproduzir, modificar, adaptar, publicar, traduzir, executar publicamente e exibir publicamente o Conteúdo do Usuário."
+      },
+      "links": {
+        "title": "Links para Outros Materiais ou Sites",
+        "desc": "Os sites vinculados não estão sob o controle da QUAZAR e a QUAZAR não é responsável pelo conteúdo de qualquer site vinculado ou qualquer link contido em um site vinculado. A QUAZAR reserva-se o direito de encerrar qualquer link ou programa de vinculação a qualquer momento. A QUAZAR não endossa empresas ou produtos aos quais se vincula e reserva-se o direito de anotá-los como tais em suas páginas da web. Se você decidir acessar qualquer um dos sites de terceiros vinculados a este Site, você o faz inteiramente por sua conta e risco."
+      },
+      "unsolicited": {
+        "title": "Política de Envio de Ideias Não Solicitadas",
+        "desc": "A QUAZAR OU SEUS FUNCIONÁRIOS NÃO ACEITAM OU CONSIDERAM IDEIAS NÃO SOLICITADAS, INCLUINDO IDEIAS PARA NOVAS CAMPANHAS PUBLICITÁRIAS, NOVAS PROMOÇÕES, NOVOS PRODUTOS OU TECNOLOGIAS, PROCESSOS, MATERIAIS, PLANOS DE MARKETING OU NOVOS NOMES DE PRODUTOS. POR FAVOR, NÃO ENVIE NENHUMA OBRA DE ARTE ORIGINAL, AMOSTRAS, DEMOS OU OUTROS TRABALHOS. O ÚNICO OBJETIVO DESTA POLÍTICA É EVITAR POSSÍVEIS MAL-ENTENDIDOS OU DISPUTAS QUANDO OS PRODUTOS OU ESTRATÉGIAS DE MARKETING DA QUAZAR POSSAM PARECER SEMELHANTES A IDEIAS ENVIADAS À QUAZAR."
+      },
+      "general": {
+        "title": "Geral",
+        "p1": "O acesso do usuário a este Site é regido por todas as leis federais, estaduais e locais aplicáveis. Todas as informações disponíveis no Site estão sujeitas às leis de controle de exportação de São Vicente e Granadinas e também podem estar sujeitas às leis do país onde você reside.",
+        "p2": "A QUAZAR não faz nenhuma representação de que os Materiais no site são apropriados ou estão disponíveis para uso em outros locais, e o acesso a eles de territórios onde seu conteúdo é ilegal é proibido. Aqueles que optam por acessar este site de outros locais o fazem por sua própria iniciativa e são responsáveis pelo cumprimento das leis locais aplicáveis. Estes Termos constituem o acordo integral entre você e a QUAZAR e regem seu uso do Site.",
+        "p3": "Cada usuário pode estar sujeito a termos e condições adicionais que podem se aplicar quando esse usuário usa serviços afiliados, conteúdo de terceiros ou software de terceiros. Os Termos e o relacionamento entre você e a QUAZAR serão regidos pelas leis de São Vicente e Granadinas, sem levar em conta suas disposições sobre conflito de leis, e cada parte se submeterá à jurisdição pessoal e exclusiva dos tribunais localizados em São Vicente e Granadinas."
+      },
+      "contact": {
+        "title": "Contate-nos",
+        "desc": "Se você tiver alguma dúvida sobre estes Termos, entre em contato conosco por e-mail em <1>info@quazar.io</1>.",
+        "company": {
+          "name": "ADA WEALTHTECH LLC",
+          "details": [
+            "Número da Empresa: 2151 LLC 2022",
+            "Suíte 305, Griffith Corporate Centre",
+            "Beachmont, Kingstown",
+            "São Vicente e Granadinas"
+          ]
+        }
+      }
+    }
+  },
+  "privacyPolicy": {
+    "title": "Política de Privacidade",
+    "lastUpdated": "Última Atualização: Novembro 2025",
+    "sections": {
+      "intro": {
+        "title": "1. Introdução",
+        "p1": "ADA WEALTHTECH LLC fornece software como serviço, que permite que você utilize várias funcionalidades para gerenciar suas participações em criptomoedas em diferentes contas, incluindo SmartTrade Terminal e Bots de Trading automatizados.",
+        "p2": "Esta Política de Privacidade explica os princípios de como a ADA WEALTHTECH LLC, registrada na Suíte 305, Griffith Corporate Centre, Beachmont, Kingstown, St. Vincent & Grenadines, e-mail <1>info@quazar.io</1> (doravante \"QUAZAR\", \"nosso\", \"nós\" ou \"nos\") como controlador de dados pessoais coleta e processa seus (\"você\") dados pessoais quando você visita o site <2>https://quazar.io</2> (\"Site\") e em relação ao fornecimento do Software."
+      },
+      "dataCollect": {
+        "title": "2. Dados Que Coletamos",
+        "intro": "Coletamos, processamos, revisamos, distribuímos, armazenamos e usamos informações pessoais estabelecidas no parágrafo abaixo:",
+        "technical": {
+          "title": "Técnico",
+          "desc": "Ao visitar nosso Site, processamos dados técnicos relacionados ao seu uso do Site, incluindo, mas não se limitando a endereço IP, dados de localização (até o nível da cidade), provedor de acesso, URL de referência, data, hora, tokens de acesso, chave de sessão, tipo e versão do navegador, idioma do navegador, sistema operacional, quantidade e estado dos dados transferidos. Essas informações podem estar relacionadas a você, portanto, Informações de Identificação Pessoal também podem ser processadas. Esses dados também podem ser processados como dados estatísticos anonimizados."
+        },
+        "cookies": {
+          "title": "Cookies",
+          "desc": "Aplicamos cookies no Site, para otimizar o Site e suas funcionalidades. Os cookies podem coletar seus dados pessoais. Para saber mais sobre os cookies que usamos, leia nossa Política de Cookies."
+        },
+        "social": {
+          "title": "Mídias Sociais",
+          "desc": "Caso você interaja conosco através do chat ao vivo do nosso Site, e-mails e formulários de inscrição, página do Facebook, canal do Youtube, página do Twitter ou Telegram ou qualquer outra conta oficial de mídia social, processamos, além das Informações de Identificação Pessoal (limitadas em caso de contato via mídia social), também o conteúdo de sua mensagem."
+        },
+        "software": {
+          "title": "Quando você usa o Software",
+          "items": [
+            "<1>Informações de Identificação Pessoal:</1> Nome, endereço de e-mail, chave 2FA, endereço IP, token KYC, idioma, ID de cliente do Google Analytics, imagem de Avatar.",
+            "<1>Finanças e Transações:</1> Nome de usuário da Conta de Exchange, chave de API, segredo de API, frase secreta, dados de transação (data/hora/valor da transação), solicitação/resposta de transação, status de Referência, informações de faturamento (país, número de telefone, endereço, cidade, código postal; no caso de uma entidade: nome comercial, código de registro)."
+          ]
+        },
+        "sources": {
+          "title": "Os dados pessoais que processamos são coletados de uma das seguintes fontes:",
+          "items": [
+            "Os dados são divulgados por você diretamente para nós;",
+            "Recebemos os dados do seu provedor de Conta de Exchange conectando suas Contas de Exchange à Conta do Cliente;",
+            "Recebemos os dados do provedor de serviços de mídia social quando você se registra ou nos contata através de sua conta de mídia social;",
+            "Recebemos os dados do provedor de serviços de pagamento quando você executa o Acordo de Usuário e paga pela Assinatura;",
+            "Recebemos Dados Técnicos automaticamente do seu navegador, nossos servidores e sistemas."
+          ]
+        }
+      },
+      "purpose": {
+        "title": "3. Para que usamos seus dados pessoais",
+        "desc": "Estabelecemos abaixo as razões pelas quais processamos seus dados pessoais:",
+        "items": [
+          "Autenticação do cliente, uso do software e suas funcionalidades",
+          "Comunicação via dispositivos, mídias sociais e aplicativos (por exemplo, aplicativo móvel, e-mail, Site, Bot do Telegram)",
+          "Campanhas de marketing direto - Campanhas de marketing para clientes em relação ao Software, suas funcionalidades e produtos",
+          "Processamento de dados para análise preditiva e insights, melhoria e desenvolvimento do Software",
+          "Diagnóstico e resolução de problemas técnicos relacionados ao Software e ao Site",
+          "Armazenamento de informações contendo dados pessoais em sistemas de backup",
+          "Divulgação de dados para potenciais adquirentes do negócio da ADA WEALTHTECH LLC, incluindo consultores jurídicos, prestadores de serviços de auditoria em caso de fusão, aquisição ou venda de todo ou parte de nosso negócio",
+          "Divulgação de dados aos nossos prestadores de serviços",
+          "Divulgações obrigatórias para autoridades policiais e de proteção de dados",
+          "Verificação de identidade do cliente (KYC) para recuperação",
+          "Histórico de transações do cliente",
+          "Responder às suas perguntas e solicitações enviadas através do site, formulários de inscrição, chat ao vivo ou e-mail ou quaisquer plataformas de mídia social",
+          "Faturamento do cliente para o Acordo de Usuário",
+          "Transferência de fundos de um provedor de serviços de pagamento para sua Conta de Cliente e realização de pagamentos mediante sua solicitação de retirada via provedor de serviços de pagamento"
+        ]
+      },
+      "sharing": {
+        "title": "4. Compartilhando Seus Dados Pessoais",
+        "p1": "Quaisquer dados que você fornecer não serão exibidos publicamente ou compartilhados com outros visitantes do Site ou clientes. Certos funcionários da ADA WEALTHTECH LLC têm acesso a dados pessoais na medida necessária para o desempenho de suas funções de trabalho.",
+        "p2": "Usamos processadores terceirizados e controladores de dados separados para ajudar a fornecer nosso serviço. Eles terão acesso aos seus dados pessoais conforme razoavelmente necessário para realizar essas tarefas em nosso nome e são obrigados a não divulgá-los ou usá-los para outros fins.",
+        "affiliates": {
+          "title": "Com Afiliadas e Subsidiárias",
+          "desc": "Para fins limitados e consistentes com este Aviso de Privacidade, compartilhamos informações pessoais com Afiliadas e Subsidiárias. Também compartilhamos informações não pessoalmente identificáveis, como informações anonimizadas ou agregadas, com fornecedores para fins como análise, identificação de tendências nas áreas de nossos produtos e auxílio na pesquisa e desenvolvimento de novos Serviços QUAZAR."
+        },
+        "advertising": {
+          "title": "Para Publicidade e Marketing",
+          "desc": "Compartilhamos suas informações com nossos parceiros de empresas terceirizadas para preparar e entregar conteúdo publicitário e de marketing, fornecer serviços de conteúdo e permitir que eles forneçam anúncios mais personalizados e estudem a eficácia de nossas campanhas. A QUAZAR não compartilha suas informações pessoais com terceiros não afiliados para seu próprio uso publicitário ou de marketing sem sua permissão."
+        }
+      },
+      "security": {
+        "title": "5. Garantindo a Segurança de Dados Pessoais",
+        "desc": "Tomamos as medidas de segurança técnicas e organizacionais necessárias para proteger seus dados pessoais contra destruição acidental ou ilegal, perda ou alteração e contra divulgação não autorizada, abuso ou outro processamento em violação da lei aplicável. Também o incentivamos a tomar medidas para garantir a segurança de seus dados pessoais. Em particular, aconselhamos você a não compartilhar seus dados pessoais conosco ou com qualquer um de nossos parceiros através de fóruns públicos ou outros canais públicos, a menos que você reconheça e aceite que os dados relevantes serão acessíveis publicamente."
+      },
+      "retention": {
+        "title": "6. Retenção e Exclusão de Dados Pessoais",
+        "p1": "Seus dados pessoais serão armazenados na medida razoavelmente necessária para atingir os objetivos declarados na Seção 3 acima, ou até que a obrigação legal estipule que o façamos.",
+        "p2": "Caso você seja um Cliente, como regra geral, reteremos todos os seus dados por 7 dias após o término do Acordo de Cliente de maneira que permita reativar a Conta de Cliente. Caso contrário, consulte o seguinte resumo não exaustivo sobre o armazenamento de seus dados pessoais:",
+        "items": [
+          "Para fins contábeis, retemos Dados Financeiros, Dados de Transação e Informações de Identificação Pessoal conectadas a eles por um período de 7 anos a partir do final do ano financeiro em que a respectiva transação comercial ocorreu;",
+          "Dados conectados ao Acordo de Cliente ou ao Acordo de Compra são retidos por todo o período em que o respectivo acordo estiver em vigor e pelo menos 3 anos a partir do momento da rescisão do respectivo acordo.",
+          "Dados Técnicos serão retidos por 30 dias a partir da coleta de tais dados;",
+          "Dados de Comunicação serão retidos por um período de 3 anos a partir do momento em que o respectivo fluxo de comunicação foi fechado."
+        ]
+      },
+      "rights": {
+        "title": "7. Seus Direitos e Preferências",
+        "intro": "De acordo com a lei de proteção de dados, você tem direitos, incluindo:",
+        "items": [
+          "<1>Direito de ser informado e acessar:</1> Você pode obter informações sobre seus dados pessoais processados por nós.",
+          "<1>Direito à portabilidade de dados:</1> Você tem o direito de receber seus dados pessoais de nós em um formato estruturado, comumente usado e legível por máquina.",
+          "<1>Direito ao apagamento:</1> Você tem o direito de ter os dados pessoais que processamos sobre você apagados de nossos sistemas se os dados pessoais não forem mais necessários para os fins relacionados.",
+          "<1>Direito de objetar e restringir:</1> Você tem o direito de objetar ao processamento de seus dados pessoais e restringi-lo em certos casos.",
+          "<1>Direito à retificação:</1> Você tem o direito de fazer correções em seus dados pessoais.",
+          "<1>Direito de retirar o consentimento:</1> Quando você nos deu consentimento para processar seus dados pessoais, você pode retirar seu consentimento a qualquer momento."
+        ]
+      },
+      "other": {
+        "title": "8. Outras Informações Importantes",
+        "newsletter": "<1>Newsletter e notificações:</1> Com seu consentimento explícito, você pode estar sujeito a campanhas de marketing direto, podemos enviar nossa newsletter ou fornecer notificações. Você pode optar por não receber as campanhas de marketing direto, newsletters e notificações nas configurações da sua conta.",
+        "dispute": "<1>Resolução de disputas:</1> Se você tiver dúvidas, sinta-se à vontade para entrar em contato com <2>info@quazar.io</2>. Disputas relacionadas ao processamento de dados pessoais são resolvidas através do nosso suporte ao cliente.",
+        "age": "<1>Limitações de Idade:</1> Não coletamos intencionalmente nenhuma informação de indivíduos menores de 18 anos de idade. Se descobrirmos que um usuário tem menos de 18 anos, exigiremos que o usuário encerre sua conta e tomaremos medidas para excluir quaisquer informações coletadas o mais rápido possível."
+      },
+      "contact": {
+        "title": "Como Nos Contatar",
+        "company": {
+          "name": "ADA WEALTHTECH LLC",
+          "mailing": "Endereço para correspondência:",
+          "details": [
+            "Suíte 305, Griffith Corporate Centre",
+            "Beachmont, Kingstown",
+            "São Vicente e Granadinas"
+          ],
+          "email": "Email: <1>info@quazar.io</1>"
+        }
+      }
+    }
+  },
+  "cookieNotice": {
+    "title": "Aviso de Cookies",
+    "lastUpdated": "Última Atualização: Novembro 2025",
+    "sections": {
+      "intro": {
+        "title": "AVISO DE COOKIES DA QUAZAR",
+        "p1": "ADA WEALTHTECH LLC controla e opera o site <1>https://quazar.io</1>.",
+        "p2": "Este Aviso atualiza e substitui versões anteriores. Podemos alterar este Aviso a qualquer momento. A seção \"ÚLTIMA ATUALIZAÇÃO\" no topo desta página lista quando este Aviso foi revisado pela última vez. Quaisquer alterações a este Aviso entrarão em vigor quando disponibilizarmos o Aviso revisado nos ou através dos Sites.",
+        "p3": "Nossos Sites (conforme definido abaixo) usam Cookies e Tecnologias Semelhantes para garantir que ofereçamos aos nossos visitantes a melhor experiência possível, fornecendo informações personalizadas, lembrando suas preferências de marketing e produtos e ajudando você a obter as informações certas. Você pode descobrir mais sobre Cookies e Tecnologias Semelhantes, como os usamos e como controlá-los abaixo."
+      },
+      "use": {
+        "title": "Uso de Cookies e Tecnologias Semelhantes",
+        "p1": "Este Aviso descreve como a ADA WEALTHTECH LLC, nossos parceiros e nossos outros terceiros usam Cookies e Tecnologias Semelhantes (como pixel tags, web beacons, clear GIFs, JavaScript e armazenamento local). Referiremo-nos a esses Cookies e Tecnologias Semelhantes simplesmente como \"Cookies\" para o restante deste Aviso. Também descreveremos quais opções você pode ter em relação a esses Cookies.",
+        "p2": "Este Aviso cobre o uso de Cookies pela ADA WEALTHTECH LLC que podem ser usados em conexão com os sites (incluindo sites móveis e aplicativos) de propriedade e controlados pela ADA WEALTHTECH LLC (os \"Sites\"). Em alguns casos, podemos usar Cookies para coletar informações que são pessoalmente identificáveis ou que podem se tornar pessoalmente identificáveis se as combinarmos com outras informações. Nesses casos, tal Aviso de Privacidade se aplicará além deste Aviso de Cookies da ADA WEALTHTECH LLC."
+      },
+      "whatAre": {
+        "title": "O que são Cookies?",
+        "p1": "Cookies são pequenos arquivos—geralmente consistindo de letras e números—colocados em seu computador, tablet, telefone ou dispositivo semelhante, quando você usa esse dispositivo para visitar um site. Cookies são amplamente utilizados pelos proprietários de sites para fazer seus sites funcionarem, funcionarem com mais eficiência e fornecerem informações analíticas.",
+        "intro": "Estes são os diferentes tipos de Cookies que nós e nossos prestadores de serviços podemos usar em nossos Sites:",
+        "types": {
+          "essential": {
+            "title": "Cookies Essenciais",
+            "desc": "Estes Cookies são necessários para o funcionamento de nossos Sites (por exemplo, para permitir que você faça login em áreas seguras do nosso site ou use um carrinho de compras). Estes cookies permitem que você navegue pelos Sites e use seus recursos. Desativar esses Cookies prejudicará o desempenho do Site e pode tornar os recursos e serviços indisponíveis."
+          },
+          "analytics": {
+            "title": "Cookies de Análise e Personalização",
+            "desc": "Estes cookies nos permitem analisar atividades em nossos Sites e em outros sites onde publicamos conteúdo para melhorar e otimizar a maneira como nossos Sites funcionam. Por exemplo, podemos usar esses tipos de Cookies para garantir que os visitantes possam encontrar facilmente as informações que procuram em nossos sites. Uma maneira de fazer isso é reconhecer e contar o número de visitantes e ver como eles se movem pelo nosso site quando o estão usando. Cookies de análise também nos ajudam a medir o desempenho de nossas campanhas publicitárias para nos ajudar a melhorar nossas campanhas publicitárias e otimizar o conteúdo de nossos Sites para aqueles que se envolvem com nossa publicidade."
+          },
+          "functionality": {
+            "title": "Cookies de Funcionalidade",
+            "desc": "Estes Cookies são usados para reconhecê-lo quando você retorna aos nossos Sites. Isso nos permite personalizar nosso conteúdo para você, cumprimentá-lo pelo nome e lembrar suas preferências (por exemplo, sua escolha de idioma ou região)."
+          },
+          "advertising": {
+            "title": "Cookies de Publicidade",
+            "desc": "Estes Cookies registram suas atividades online, incluindo suas visitas aos nossos Sites, as páginas que você visitou e os links e anúncios em que clicou. Um objetivo disso é ajudar a tornar o conteúdo exibido em nossos Sites mais relevante para você. Outro objetivo é permitir que nós e nossos prestadores de serviços entreguemos anúncios ou outras comunicações a você que sejam projetados para serem mais relevantes para seus interesses aparentes. Quando nós e nossos prestadores de serviços fazemos isso, isso também envolve parceiros como editores, plataformas de gerenciamento de dados e plataformas do lado da demanda que ajudam a gerenciar os dados. Por exemplo, se você olhar para uma página em um de nossos Sites, podemos fazer com que um anúncio seja entregue a você, em nossos Sites ou em outros sites, para produtos referenciados nessa página ou para produtos e serviços semelhantes. Nós e nossos prestadores de serviços e parceiros também podemos anexar outros dados às informações coletadas por esses Cookies, incluindo informações obtidas de terceiros, e compartilhar essas informações com terceiros com o objetivo de entregar anúncios a você."
+          }
+        }
+      },
+      "collectUse": {
+        "title": "Como a ADA WEALTHTECH LLC Coleta e Usa Outras Informações?",
+        "intro": "Nós e nossos prestadores de serviços podemos usar Cookies para uma variedade de propósitos, incluindo para:",
+        "items": [
+          "Ajudar a nós e a terceiros a obter informações sobre suas visitas aos Sites;",
+          "Processar seus pedidos;",
+          "Analisar seus padrões de visita para melhorar nossos Sites;",
+          "Entregar publicidade, comunicações e conteúdo de nós e de terceiros, em nossos Sites e nos de terceiros, específicos para seus interesses;",
+          "Lembrar seu idioma e outras preferências;",
+          "Ajudá-lo a obter as informações que você procura;",
+          "Fornecer um serviço seguro e protegido para transações online;",
+          "Medir quantas pessoas usam nossos Sites e como elas os usam, para manter nossos Sites funcionando de forma eficiente e entender melhor o público de nossos Sites."
+        ],
+        "p2": "Se você se registrar em um de nossos Sites ou de outra forma nos fornecer suas informações pessoais, podemos associar essas informações a outras informações que coletamos de ou sobre você ou que você fornece, informações sobre seu uso de nossos Sites ou informações que recebemos de ou sobre você de terceiros. Usaremos esses dados combinados para fins de marketing e análise."
+      },
+      "duration": {
+        "title": "Por Quanto Tempo os Cookies Ficam no Meu Dispositivo?",
+        "desc": "Alguns Cookies operam desde o momento em que você visita o serviço QUAZAR até o final dessa sessão de navegação na web específica. Esses Cookies expiram e são excluídos automaticamente quando você fecha seu navegador de Internet. Esses Cookies são chamados de Cookies de \"sessão\". Alguns Cookies permanecerão no seu dispositivo entre as sessões de navegação—eles não expiram quando você fecha seu navegador. Esses Cookies são chamados de Cookies \"persistentes\". A duração que um Cookie persistente permanece no seu dispositivo varia de Cookie para Cookie. Nós e outros usamos Cookies persistentes para uma variedade de propósitos, como armazenar suas preferências para que estejam disponíveis para a próxima visita, e para manter uma conta mais precisa de com que frequência você visita nossos Sites, com que frequência você retorna, como seu uso dos Sites pode variar ao longo do tempo e a eficácia dos esforços publicitários."
+      },
+      "whoPuts": {
+        "title": "Quem Coloca os Cookies no Meu Dispositivo?",
+        "p1": "Cookies podem ser colocados no seu dispositivo pela ADA WEALTHTECH LLC como operadora do Site. Esses Cookies são chamados de Cookies de \"primeira parte\". Alguns Cookies podem ser colocados no seu dispositivo por uma parte que não seja a ADA WEALTHTECH LLC. Esses Cookies são chamados de Cookies de \"terceira parte\". Por exemplo, um parceiro da ADA WEALTHTECH LLC pode colocar um Cookie de terceiros para habilitar serviços de chat online.",
+        "p2": "Cookies também podem ser usados para permitir que nós e terceiros saibamos quando você visita nossos Sites e para entender como você interage com e-mails, anúncios ou outro conteúdo. Através de Cookies, informações agregadas e outras que não identificam usuários individuais (como seu sistema operacional, versão do navegador e a URL de onde você veio, incluindo e-mails e anúncios) podem ser obtidas e usadas para melhorar sua experiência e entender padrões de tráfego. Essa tecnologia conta o número de usuários que visitam um serviço específico a partir de anúncios de banner específicos fora do Site da QUAZAR ou que clicaram em links ou gráficos incluídos em boletins informativos por e-mail recebidos da ADA WEALTHTECH LLC. Também é usado como uma ferramenta para compilar estatísticas agregadas sobre como os Sites da QUAZAR são usados, para realizar análises e nos ajudar a otimizar nossos Sites, e para ajudar a atendê-lo com publicidade baseada em seus interesses, conforme descrito em mais detalhes abaixo."
+      },
+      "mobileAds": {
+        "title": "Como a ADA WEALTHTECH LLC Usa Publicidade Online e Móvel?",
+        "p1": "Nós e terceiros, incluindo parceiros de tecnologia e prestadores de serviços, nos envolvemos em publicidade baseada em interesses para entregar anúncios e conteúdo personalizado que nós e outros anunciantes acreditamos que será de seu interesse. Na medida em que fornecedores terceirizados estejam usando Cookies para realizar esses serviços para a ADA WEALTHTECH LLC ou outros, a ADA WEALTHTECH LLC não controla o uso dessa tecnologia ou as informações resultantes e não é responsável por quaisquer ações ou políticas de tais terceiros.",
+        "p2": "Anúncios podem ser entregues a você com base no seu comportamento online ou móvel (em Sites da ADA WEALTHTECH LLC e sites não pertencentes à ADA WEALTHTECH LLC), sua atividade de pesquisa, suas respostas a um de nossos anúncios ou e-mails, as páginas que você visita, sua localização geográfica geral ou outras informações. Esses anúncios podem aparecer em nossos Sites ou em sites de terceiros. Os parceiros de tecnologia com quem trabalhamos para nos ajudar a realizar publicidade baseada em interesses podem ser membros de associações de autorregulação, como a Network Advertising Initiative (NAI) e a Digital Advertising Alliance (DAA). Para Sites direcionados a pessoas localizadas na União Europeia, podemos trabalhar com parceiros de tecnologia que são membros da European Digital Advertising Alliance (eDAA). Você também pode ver anúncios de terceiros em Sites da ADA WEALTHTECH LLC ou outros sites ou propriedades, com base em suas visitas e atividades em Sites da ADA WEALTHTECH LLC e outros sites."
+      },
+      "manage": {
+        "title": "Como Eu Gerencio Cookies?",
+        "desc": "Você pode decidir aceitar ou não Cookies. Uma maneira de fazer isso é através das configurações do seu navegador de Internet. A maioria dos navegadores de Internet permite algum controle da maioria dos Cookies através das configurações do navegador (Observe que se você usar as configurações do seu navegador para bloquear todos os Cookies, talvez não consiga acessar partes do nosso site.). Você também pode usar um plug-in de navegador como Ghostery* da Cliqz International GmbH. (Um plug-in de navegador é um software que adiciona recursos extras ao seu navegador—por exemplo, para reproduzir vídeo ou verificar vírus.). Para saber mais sobre publicidade baseada em interesses e suas escolhas, visite estes sites: Digital Advertising Alliance, a Network Advertising Initiative e o Interactive Advertising Bureau (IAB) Europe."
+      },
+      "flash": {
+        "title": "Cookies Flash e Outras Tecnologias",
+        "flash": "<1>Cookies Flash:</1> Nossos sites também podem usar os chamados \"Cookies Flash\" (também conhecidos como Objetos Compartilhados Locais) para lembrar configurações e preferências, para fornecer conteúdo especial, como reprodução de vídeo e animação, e para outras operações do site. Se você não quiser que os Cookies Flash sejam armazenados no seu computador, você pode ajustar as configurações do seu player Flash para bloquear o armazenamento de Cookies Flash usando as ferramentas contidas no Painel de Configurações de Armazenamento do Site.",
+        "tracking": "<1>Outras tecnologias de rastreamento:</1> Cookies não são a única maneira de reconhecer ou rastrear visitantes de um site. A ADA WEALTHTECH LLC pode usar outras tecnologias semelhantes de tempos em tempos, como web beacons (às vezes chamados de \"pixels de rastreamento\" ou \"gifs claros\"). Estes são pequenos arquivos gráficos que contêm um identificador único que nos permite reconhecer quando alguém visitou nossos sites ou abriu um e-mail que enviamos a eles. Em muitos casos, essas tecnologias dependem de cookies para funcionar corretamente e, portanto, recusar cookies prejudicará seu funcionamento.",
+        "dnt": "<1>Não Rastrear:</1> Atualmente não há uma resposta acordada pela indústria para um sinal de Não Rastrear. Neste momento, os Serviços e sites da ADA WEALTHTECH LLC não funcionam de maneira diferente com base no sinal de Não Rastrear de um usuário."
+      },
+      "contact": {
+        "title": "Como Nos Contatar",
+        "desc": "Se você tiver alguma dúvida sobre como a ADA WEALTHTECH LLC usa Cookies, você pode entrar em contato com a ADA WEALTHTECH LLC usando o formulário Fale Conosco ou enviar uma carta para o endereço de correspondência abaixo. Inclua suas informações de contato, o nome do site ou serviço da ADA WEALTHTECH LLC e uma descrição detalhada de sua solicitação ou preocupação com Cookies.",
+        "company": {
+          "name": "ADA WEALTHTECH LLC",
+          "mailing": "Endereço para correspondência:",
+          "details": [
+            "Suíte 305, Griffith Corporate Centre",
+            "Beachmont, Kingstown",
+            "São Vicente e Granadinas"
+          ],
+          "email": "Email: <1>info@quazar.io</1>"
+        }
+      }
+    }
+  }
+}

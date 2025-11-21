@@ -1,13 +1,15 @@
 
 import React, { useEffect, useState } from 'react';
 import { ArrowRight, Cpu } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
 
 export const Hero: React.FC = () => {
+  const { t } = useTranslation();
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
   const [showTooltip, setShowTooltip] = useState(false);
   const [typedText, setTypedText] = useState('');
   
-  const fullText = "Quazar is a decentralized GPU network combining the power of autonomous finance, secure AI with privacy, and robust blockchain infrastructure.";
+  const fullText = t('hero.fullText');
 
   useEffect(() => {
     const handleMouseMove = (event: MouseEvent) => {
@@ -24,6 +26,7 @@ export const Hero: React.FC = () => {
 
   useEffect(() => {
     let index = 0;
+    setTypedText(''); // Reset text on language change potentially
     const intervalId = setInterval(() => {
       if (index <= fullText.length) {
         setTypedText(fullText.slice(0, index));
@@ -34,7 +37,7 @@ export const Hero: React.FC = () => {
     }, 30); // Typing speed in ms
 
     return () => clearInterval(intervalId);
-  }, []);
+  }, [fullText]); // Added dependency on fullText
 
   const scrollToRoadmap = (e: React.MouseEvent) => {
     e.preventDefault();
@@ -109,12 +112,12 @@ export const Hero: React.FC = () => {
         
         <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass-panel border-quazar-primary/30 mb-8 backdrop-blur-md shadow-[0_0_20px_rgba(0,240,255,0.15)]">
             <span className="w-2 h-2 rounded-full bg-quazar-primary animate-pulse"></span>
-            <span className="text-xs font-medium text-quazar-primary tracking-widest uppercase">The Future of DePIN</span>
+            <span className="text-xs font-medium text-quazar-primary tracking-widest uppercase">{t('hero.futureDepin')}</span>
         </div>
 
         <h1 className="text-4xl md:text-6xl lg:text-7xl font-extrabold tracking-tight text-white mb-6 drop-shadow-2xl">
-          BLOCKCHAIN FOR <br />
-          <span className="text-gradient drop-shadow-[0_0_25px_rgba(0,240,255,0.4)]">DEFI & AI COMPUTING</span>
+          {t('hero.blockchainFor')} <br />
+          <span className="text-gradient drop-shadow-[0_0_25px_rgba(0,240,255,0.4)]">{t('hero.defiAi')}</span>
         </h1>
 
         <p className="max-w-2xl text-lg md:text-xl text-gray-400 mb-10 leading-relaxed drop-shadow-md min-h-[84px] md:min-h-[60px]">
@@ -127,7 +130,7 @@ export const Hero: React.FC = () => {
           <div className="relative w-full sm:w-auto">
              {showTooltip && (
                 <div className="absolute -top-14 left-1/2 -translate-x-1/2 bg-black/90 text-quazar-primary border border-quazar-primary text-sm font-bold px-4 py-2 rounded-lg shadow-[0_0_20px_rgba(0,240,255,0.3)] whitespace-nowrap z-50 transition-all duration-300 animate-bounce">
-                   Coming Soon...
+                   {t('hero.comingSoon')}
                    <div className="absolute -bottom-1.5 left-1/2 -translate-x-1/2 w-3 h-3 bg-black border-b border-r border-quazar-primary rotate-45"></div>
                 </div>
              )}
@@ -135,7 +138,7 @@ export const Hero: React.FC = () => {
                 onClick={handleWhitepaperClick}
                 className="group w-full flex items-center justify-center gap-2 px-8 py-4 bg-white text-black font-bold text-lg rounded hover:bg-gray-200 transition-all min-w-[200px]"
              >
-                Whitepaper
+                {t('hero.whitepaper')}
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
              </button>
           </div>
@@ -145,7 +148,7 @@ export const Hero: React.FC = () => {
             onClick={scrollToRoadmap}
             className="flex items-center justify-center gap-2 px-8 py-4 glass-panel border-quazar-primary/50 text-white font-bold text-lg rounded hover:bg-quazar-primary/10 transition-all min-w-[200px] cursor-pointer backdrop-blur-sm shadow-[0_0_20px_rgba(0,240,255,0.1)]"
           >
-            Start Mining
+            {t('hero.startMining')}
             <Cpu className="w-5 h-5" />
           </a>
         </div>
@@ -154,19 +157,19 @@ export const Hero: React.FC = () => {
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-16 mt-24 border-t border-white/10 pt-8 w-full bg-black/40 backdrop-blur-md rounded-xl p-4 shadow-lg">
              <div className="text-center">
                 <p className="text-3xl font-bold text-white font-mono">95%</p>
-                <p className="text-xs text-gray-400 uppercase tracking-widest mt-1">Useful Compute</p>
+                <p className="text-xs text-gray-400 uppercase tracking-widest mt-1">{t('hero.stats.usefulCompute')}</p>
              </div>
              <div className="text-center">
-                <p className="text-3xl font-bold text-white font-mono">3B</p>
-                <p className="text-xs text-gray-400 uppercase tracking-widest mt-1">QZAR For Mining</p>
+                <p className="text-3xl font-bold text-white font-mono">{t('hero.stats.miningSupplyValue')}</p>
+                <p className="text-xs text-gray-400 uppercase tracking-widest mt-1">{t('hero.stats.qzarMining')}</p>
              </div>
              <div className="text-center">
                 <p className="text-3xl font-bold text-white font-mono">TEE</p>
-                <p className="text-xs text-gray-400 uppercase tracking-widest mt-1">Privacy Standard</p>
+                <p className="text-xs text-gray-400 uppercase tracking-widest mt-1">{t('hero.stats.privacyStandard')}</p>
              </div>
              <div className="text-center">
                 <p className="text-3xl font-bold text-white font-mono">&lt; 1s</p>
-                <p className="text-xs text-gray-400 uppercase tracking-widest mt-1">Block Time</p>
+                <p className="text-xs text-gray-400 uppercase tracking-widest mt-1">{t('hero.stats.blockTime')}</p>
              </div>
         </div>
       </div>

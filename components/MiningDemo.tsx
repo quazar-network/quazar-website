@@ -1,7 +1,9 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { Activity, Server, Database, CheckCircle2, Terminal as TerminalIcon } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
 
 export const MiningDemo: React.FC = () => {
+  const { t } = useTranslation();
   const sectionRef = useRef<HTMLDivElement>(null);
   const [isActive, setIsActive] = useState(false);
   const [logs, setLogs] = useState<string[]>([]);
@@ -41,8 +43,10 @@ export const MiningDemo: React.FC = () => {
       
       // Add log lines periodically
       if (Math.random() > 0.7) {
-        const actions = ["ALLOCATING_TENSORS", "VERIFYING_ZKP", "COMPUTING_GRADIENTS", "SYNCING_STATE"];
-        const action = actions[Math.floor(Math.random() * actions.length)];
+        const actions = t('miningDemo.dashboard.actions', { returnObjects: true }) as Record<string, string>;
+        const actionKeys = Object.keys(actions);
+        const randomKey = actionKeys[Math.floor(Math.random() * actionKeys.length)];
+        const action = actions[randomKey];
         const newLog = `[${new Date().toISOString().split('T')[1].slice(0,8)}] ${action} >> OK`;
         setLogs(prev => [newLog, ...prev].slice(0, 5));
       }
@@ -50,7 +54,7 @@ export const MiningDemo: React.FC = () => {
     }, 100);
 
     return () => clearInterval(interval);
-  }, [isActive]);
+  }, [isActive, t]);
 
   return (
     <section id="mining" ref={sectionRef} className="py-24 bg-quazar-black border-t border-white/5">
@@ -60,22 +64,21 @@ export const MiningDemo: React.FC = () => {
             <div>
                 <div className="flex items-center gap-2 mb-2">
                     <div className="w-2 h-2 bg-quazar-primary animate-pulse"></div>
-                    <span className="text-quazar-primary font-mono text-xs tracking-widest uppercase">System Architecture</span>
+                    <span className="text-quazar-primary font-mono text-xs tracking-widest uppercase">{t('miningDemo.systemArchitecture')}</span>
                 </div>
-                <h2 className="text-3xl font-bold text-white">Proof of Compute</h2>
+                <h2 className="text-3xl font-bold text-white">{t('miningDemo.title')}</h2>
                 <p className="text-gray-400 mt-2 max-w-xl text-sm leading-relaxed">
-                    Users pay QZAR to request inference. Nodes utilize GPU cycles to execute the workload, 
-                    and rewards are distributed to miners and validators only after consensus verification.
+                    {t('miningDemo.desc')}
                 </p>
             </div>
             <div className="flex gap-4 text-xs font-mono text-gray-500">
                 <div className="flex items-center gap-2">
                     <div className="w-2 h-2 bg-green-500 rounded-full"></div>
-                    <span>NETWORK ONLINE</span>
+                    <span>{t('miningDemo.status.online')}</span>
                 </div>
                 <div className="flex items-center gap-2">
                     <Activity size={14} />
-                    <span>LATENCY: 12ms</span>
+                    <span>{t('miningDemo.status.latency')}</span>
                 </div>
             </div>
         </div>
@@ -85,7 +88,7 @@ export const MiningDemo: React.FC = () => {
           
           {/* Header Bar */}
           <div className="h-10 bg-[#111] border-b border-white/5 flex items-center justify-between px-4">
-            <span className="text-xs font-mono text-gray-400">NODE_ID: QZ-8829-ALPHA</span>
+            <span className="text-xs font-mono text-gray-400">{t('miningDemo.dashboard.nodeId')}</span>
             <div className="flex gap-1">
                 <div className="w-1.5 h-1.5 rounded-full bg-gray-600"></div>
                 <div className="w-1.5 h-1.5 rounded-full bg-gray-600"></div>
@@ -102,23 +105,23 @@ export const MiningDemo: React.FC = () => {
                 </div>
                 <h4 className="text-xs font-mono text-gray-500 uppercase tracking-wider mb-4 flex items-center gap-2">
                     <Server size={14} className="text-quazar-primary"/> 
-                    Ingest Stream
+                    {t('miningDemo.dashboard.ingestStream')}
                 </h4>
                 
                 <div className="space-y-3">
                     <div className="bg-black/50 p-3 border-l-2 border-quazar-primary">
-                        <div className="text-[10px] text-gray-500 font-mono mb-1">CURRENT BATCH</div>
+                        <div className="text-[10px] text-gray-500 font-mono mb-1">{t('miningDemo.dashboard.currentBatch')}</div>
                         <div className="text-white font-mono text-sm truncate">{hashes}</div>
                     </div>
                     <div className="bg-black/50 p-3 border-l-2 border-gray-700 opacity-50">
-                        <div className="text-[10px] text-gray-500 font-mono mb-1">PENDING BATCH</div>
-                        <div className="text-white font-mono text-sm truncate">0xWAITING...</div>
+                        <div className="text-[10px] text-gray-500 font-mono mb-1">{t('miningDemo.dashboard.pendingBatch')}</div>
+                        <div className="text-white font-mono text-sm truncate">{t('miningDemo.dashboard.waiting')}</div>
                     </div>
                 </div>
                 
                 <div className="mt-6">
                     <div className="flex justify-between text-[10px] font-mono text-gray-400 mb-1">
-                        <span>BUFFER CAPACITY</span>
+                        <span>{t('miningDemo.dashboard.bufferCapacity')}</span>
                         <span>42%</span>
                     </div>
                     <div className="w-full h-1 bg-gray-800">
@@ -134,7 +137,7 @@ export const MiningDemo: React.FC = () => {
                 </div>
                 <h4 className="text-xs font-mono text-gray-500 uppercase tracking-wider mb-6 flex items-center gap-2">
                     <Activity size={14} className="text-quazar-primary"/> 
-                    Inference Engine
+                    {t('miningDemo.dashboard.inferenceEngine')}
                 </h4>
 
                 <div className="flex flex-col items-center justify-center py-2">
@@ -144,7 +147,7 @@ export const MiningDemo: React.FC = () => {
                         <div className="absolute inset-4 border border-white/10 rounded-full"></div>
                         <div className="text-2xl font-bold font-mono text-white">{computeLoad.toFixed(0)}%</div>
                     </div>
-                    <div className="text-xs font-mono text-quazar-primary animate-pulse">PROCESSING TENSORS</div>
+                    <div className="text-xs font-mono text-quazar-primary animate-pulse">{t('miningDemo.dashboard.processingTensors')}</div>
                 </div>
             </div>
 
@@ -152,7 +155,7 @@ export const MiningDemo: React.FC = () => {
             <div className="p-6 flex flex-col">
                 <h4 className="text-xs font-mono text-gray-500 uppercase tracking-wider mb-4 flex items-center gap-2">
                     <TerminalIcon size={14} className="text-quazar-primary"/> 
-                    System Logs
+                    {t('miningDemo.dashboard.systemLogs')}
                 </h4>
                 
                 <div className="flex-1 bg-black border border-white/10 p-3 font-mono text-[10px] text-green-500 space-y-1 overflow-hidden relative">
@@ -164,7 +167,7 @@ export const MiningDemo: React.FC = () => {
 
                 <div className="mt-4 pt-4 border-t border-white/10 flex items-center justify-between">
                     <div>
-                        <div className="text-[10px] text-gray-500 font-mono">ESTIMATED REWARD</div>
+                        <div className="text-[10px] text-gray-500 font-mono">{t('miningDemo.dashboard.estimatedReward')}</div>
                         <div className="text-lg font-bold text-white font-mono">+0.0420 QZAR</div>
                     </div>
                     <CheckCircle2 className="text-quazar-primary" size={24} />

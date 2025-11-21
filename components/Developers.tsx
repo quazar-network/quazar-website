@@ -1,7 +1,9 @@
 import React from 'react';
 import { Terminal, Copy, Check, Code2, Cpu, Zap, Box } from 'lucide-react';
+import { useTranslation, Trans } from 'react-i18next';
 
 export const Developers: React.FC = () => {
+  const { t } = useTranslation();
   const [isCopied, setIsCopied] = React.useState(false);
 
   const codeSnippet = `from openai import OpenAI
@@ -48,15 +50,15 @@ print(f"Compute Cost: {response.usage.total_tokens * 0.0002} QZAR")`;
           <div>
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-sm bg-white/5 border border-white/10 mb-6">
                 <Box size={14} className="text-white" />
-                <span className="text-xs font-bold text-white tracking-widest uppercase">SDK & API</span>
+                <span className="text-xs font-bold text-white tracking-widest uppercase">{t('developers.sdkApi')}</span>
             </div>
             
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Developer <span className="text-gray-500">Environment</span>
+              <Trans i18nKey="developers.title" components={{ 1: <span className="text-gray-500" /> }} />
             </h2>
             
             <p className="text-gray-400 text-lg leading-relaxed mb-8">
-              Seamless integration. Connect directly to Quazar nodes using our <span className="text-white">OpenAI-compatible interface</span>. Execute decentralized AI inference by simply pointing your client to the Quazar network endpoint.
+              <Trans i18nKey="developers.desc" components={{ 1: <span className="text-white" /> }} />
             </p>
 
             <div className="space-y-6">
@@ -65,8 +67,8 @@ print(f"Compute Cost: {response.usage.total_tokens * 0.0002} QZAR")`;
                         <Zap className="text-white" size={20} />
                     </div>
                     <div>
-                        <h4 className="text-white font-bold text-base">Adapted Interface</h4>
-                        <p className="text-gray-500 text-sm mt-1">Custom fork of the OpenAI API spec, re-engineered to support decentralized routing and consensus verification.</p>
+                        <h4 className="text-white font-bold text-base">{t('developers.features.interface.title')}</h4>
+                        <p className="text-gray-500 text-sm mt-1">{t('developers.features.interface.desc')}</p>
                     </div>
                 </div>
                 
@@ -75,8 +77,8 @@ print(f"Compute Cost: {response.usage.total_tokens * 0.0002} QZAR")`;
                         <Cpu className="text-white" size={20} />
                     </div>
                     <div>
-                        <h4 className="text-white font-bold text-base">Verifiable Inference</h4>
-                        <p className="text-gray-500 text-sm mt-1">Cryptographically verified outputs via the Quazar Consensus Protocol.</p>
+                        <h4 className="text-white font-bold text-base">{t('developers.features.verification.title')}</h4>
+                        <p className="text-gray-500 text-sm mt-1">{t('developers.features.verification.desc')}</p>
                     </div>
                 </div>
             </div>
@@ -85,7 +87,7 @@ print(f"Compute Cost: {response.usage.total_tokens * 0.0002} QZAR")`;
                 onClick={scrollToRoadmap}
                 className="mt-10 px-6 py-3 bg-white text-black text-sm font-bold uppercase tracking-wide rounded-sm hover:bg-gray-200 transition-colors flex items-center gap-2"
             >
-                Read Documentation
+                {t('developers.readDocs')}
                 <Terminal size={16} />
             </button>
           </div>
@@ -117,13 +119,13 @@ print(f"Compute Cost: {response.usage.total_tokens * 0.0002} QZAR")`;
                         <code>
 <span className="text-purple-400">from</span> openai <span className="text-purple-400">import</span> OpenAI
 
-<span className="text-gray-600"># Initialize connection to Quazar Network</span>
+<span className="text-gray-600">{t('developers.code.comment1')}</span>
 client = OpenAI(
     base_url=<span className="text-green-400">"https://node1.quazar.io/v1"</span>, 
     api_key=<span className="text-green-400">"qz_sk_7f92a...8b2"</span>
 )
 
-<span className="text-gray-600"># Run inference on decentralized nodes</span>
+<span className="text-gray-600">{t('developers.code.comment2')}</span>
 response = client.chat.completions.create(
     model=<span className="text-green-400">"quazar-llama-3-70b-instruct"</span>,
     messages=[
@@ -131,7 +133,7 @@ response = client.chat.completions.create(
     ]
 )
 
-<span className="text-purple-400">print</span>(f<span className="text-green-400">"Response: &#123;response.choices[0].message.content&#125;"</span>)
+<span className="text-purple-400">print</span>(f<span className="text-green-400">"{t('developers.code.response')}: &#123;response.choices[0].message.content&#125;"</span>)
                         </code>
                     </pre>
                 </div>
@@ -140,7 +142,7 @@ response = client.chat.completions.create(
                 <div className="bg-[#050505] border-t border-white/10 p-4">
                     <div className="flex items-center gap-2 text-[10px] text-gray-600 mb-2 uppercase tracking-wider font-bold">
                         <Terminal size={10} />
-                        Terminal Output
+                        {t('developers.terminal.title')}
                     </div>
                     <div className="font-mono text-xs space-y-1.5">
                         <div className="flex gap-2">
@@ -148,13 +150,13 @@ response = client.chat.completions.create(
                             <span className="text-gray-400">python3 main.py</span>
                         </div>
                         <div className="text-gray-500 pl-4">
-                            [09:41:22] Resolving decentralized mesh... OK
+                            [09:41:22] {t('developers.terminal.resolving')}
                         </div>
                          <div className="text-gray-500 pl-4">
-                            [09:41:23] Handshake node_id=QZ-882... OK
+                            [09:41:23] {t('developers.terminal.handshake')}
                         </div>
                         <div className="text-gray-300 pl-4 pt-1">
-                            Response: Proof-of-Compute is a consensus mechanism where miners validate blocks by performing useful AI inference...
+                            {t('developers.terminal.response')}
                         </div>
                     </div>
                 </div>

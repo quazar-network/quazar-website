@@ -2,8 +2,10 @@
 import React, { useState } from 'react';
 import { UserType } from '../types';
 import { Smartphone, Cpu, Code2, CheckCircle2, TrendingUp, Wallet, MessageSquare, ArrowUpRight, MoreHorizontal, Battery, Wifi, Signal } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
 
 const WalletMockup = () => {
+  const { t } = useTranslation();
   return (
     <div className="flex items-center justify-center h-full w-full p-8">
       <div className="relative mx-auto border-gray-800 bg-gray-800 border-[8px] rounded-[3rem] h-[600px] w-[320px] shadow-2xl flex flex-col overflow-hidden transform transition-transform hover:scale-[1.02] duration-500">
@@ -50,7 +52,7 @@ const WalletMockup = () => {
                 {/* Subtle Breathing Background Glow */}
                 <div className="absolute -top-12 -right-12 w-32 h-32 bg-quazar-primary/10 rounded-full blur-3xl animate-[pulse_4s_ease-in-out_infinite]"></div>
                 
-                <span className="relative text-gray-400 text-xs uppercase tracking-wider z-10">Total Balance</span>
+                <span className="relative text-gray-400 text-xs uppercase tracking-wider z-10">{t('ecosystem.wallet.totalBalance')}</span>
                 <h2 className="relative text-3xl font-bold text-white mt-1 z-10">$173,100.45</h2>
                 <div className="relative flex items-center gap-1 text-green-400 text-sm mt-2 z-10">
                     <TrendingUp size={14} />
@@ -59,10 +61,10 @@ const WalletMockup = () => {
                 
                 <div className="relative grid grid-cols-2 gap-3 mt-5 z-10">
                     <button className="bg-quazar-primary text-black py-2 rounded-lg font-bold text-sm flex items-center justify-center gap-1 hover:bg-cyan-300 transition-colors">
-                        <ArrowUpRight size={16} /> Send
+                        <ArrowUpRight size={16} /> {t('ecosystem.wallet.send')}
                     </button>
                     <button className="bg-white/10 text-white py-2 rounded-lg font-bold text-sm hover:bg-white/20 transition-colors">
-                        Receive
+                        {t('ecosystem.wallet.receive')}
                     </button>
                 </div>
             </div>
@@ -70,8 +72,8 @@ const WalletMockup = () => {
             {/* Assets List */}
             <div className="space-y-3 mb-auto">
                 <div className="flex justify-between items-center text-sm mb-2">
-                    <span className="text-gray-400 font-medium">Assets</span>
-                    <span className="text-quazar-primary cursor-pointer hover:text-cyan-300">View All</span>
+                    <span className="text-gray-400 font-medium">{t('ecosystem.wallet.assets')}</span>
+                    <span className="text-quazar-primary cursor-pointer hover:text-cyan-300">{t('ecosystem.wallet.viewAll')}</span>
                 </div>
                 
                 {[
@@ -104,13 +106,13 @@ const WalletMockup = () => {
                         <div className="absolute inset-0 rounded-full bg-quazar-primary/20 animate-ping opacity-20"></div>
                     </div>
                     <div>
-                        <p className="text-white text-xs font-bold mb-1">Quazar Assistant</p>
+                        <p className="text-white text-xs font-bold mb-1">{t('ecosystem.wallet.assistant')}</p>
                         <p className="text-gray-300 text-xs leading-relaxed">
-                           Portfolio check complete. Volatility is low. Recommended action: Rebalance ETH allocation.
+                           {t('ecosystem.wallet.assistantMsg')}
                         </p>
                          <div className="flex gap-2 mt-2">
-                            <button className="px-2 py-1 bg-quazar-primary/10 text-quazar-primary text-[10px] rounded font-bold border border-quazar-primary/20 hover:bg-quazar-primary/20 transition-colors">Execute</button>
-                            <button className="px-2 py-1 bg-white/5 text-gray-400 text-[10px] rounded border border-white/5 hover:bg-white/10 transition-colors">Dismiss</button>
+                            <button className="px-2 py-1 bg-quazar-primary/10 text-quazar-primary text-[10px] rounded font-bold border border-quazar-primary/20 hover:bg-quazar-primary/20 transition-colors">{t('ecosystem.wallet.execute')}</button>
+                            <button className="px-2 py-1 bg-white/5 text-gray-400 text-[10px] rounded border border-white/5 hover:bg-white/10 transition-colors">{t('ecosystem.wallet.dismiss')}</button>
                          </div>
                     </div>
                 </div>
@@ -127,6 +129,7 @@ const WalletMockup = () => {
 };
 
 const DevMockup = () => {
+  const { t } = useTranslation();
   return (
     <div className="w-full h-full flex items-center justify-center p-4 sm:p-8">
       <div className="relative w-full max-w-lg bg-[#0a0a0a] border border-white/10 rounded-xl overflow-hidden shadow-[0_0_50px_rgba(0,0,0,0.5)]">
@@ -139,7 +142,7 @@ const DevMockup = () => {
              <div className="w-2.5 h-2.5 rounded-full bg-green-500/20 border border-green-500/50"></div>
            </div>
            <div className="ml-auto px-2 py-0.5 bg-white/5 rounded text-[9px] font-mono text-gray-500">
-             AGENT_DEPLOY.SH
+             {t('ecosystem.devMockup.title')}
            </div>
         </div>
 
@@ -156,7 +159,7 @@ const DevMockup = () => {
                  </div>
                  
                  <div className="absolute -bottom-3 bg-[#111] px-3 py-1 rounded border border-quazar-primary/30 text-[9px] font-bold text-quazar-primary tracking-wider z-20">
-                    INITIALIZING
+                    {t('ecosystem.devMockup.initializing')}
                  </div>
             </div>
 
@@ -165,7 +168,7 @@ const DevMockup = () => {
                 
                 <div>
                     <div className="flex justify-between mb-1.5">
-                        <span className="text-gray-400">COMPILING_LOGIC</span>
+                        <span className="text-gray-400">{t('ecosystem.devMockup.compiling')}</span>
                         <CheckCircle2 size={12} className="text-green-500" />
                     </div>
                     <div className="h-1 bg-gray-800 rounded-full w-full"><div className="h-full bg-green-500 w-full rounded-full"></div></div>
@@ -173,7 +176,7 @@ const DevMockup = () => {
 
                 <div>
                     <div className="flex justify-between mb-1.5">
-                        <span className="text-gray-400">MINTING_PASSPORT_NFT</span>
+                        <span className="text-gray-400">{t('ecosystem.devMockup.minting')}</span>
                         <CheckCircle2 size={12} className="text-green-500" />
                     </div>
                     <div className="h-1 bg-gray-800 rounded-full w-full"><div className="h-full bg-green-500 w-full rounded-full"></div></div>
@@ -181,7 +184,7 @@ const DevMockup = () => {
 
                 <div>
                     <div className="flex justify-between mb-1.5">
-                        <span className="text-white animate-pulse">PROVISIONING_WALLET</span>
+                        <span className="text-white animate-pulse">{t('ecosystem.devMockup.provisioning')}</span>
                         <span className="text-quazar-primary">78%</span>
                     </div>
                     <div className="h-1 bg-gray-800 rounded-full w-full relative overflow-hidden">
@@ -208,47 +211,29 @@ const DevMockup = () => {
 };
 
 export const Ecosystem: React.FC = () => {
+  const { t } = useTranslation();
   const [activeTab, setActiveTab] = useState<UserType>(UserType.USER);
 
   const content = {
     [UserType.USER]: {
       icon: Smartphone,
-      title: "The Quazar Wallet",
-      description: "A gateway to decentralized AI finance without the complexity.",
-      features: [
-        "Access to fine-tuned crypto AI models",
-        "FaceID transaction signing",
-        "Automated portfolio rebalancing",
-        "Banking features: Recurring payments & Limits",
-        "One-click asset conversion"
-      ],
+      title: t('ecosystem.content.user.title'),
+      description: t('ecosystem.content.user.desc'),
+      features: t('ecosystem.content.user.features', { returnObjects: true }) as string[],
       component: <WalletMockup />
     },
     [UserType.MINER]: {
       icon: Cpu,
-      title: "GPU Mining & Inference",
-      description: "Monetize your hardware by powering the next generation of AI.",
-      features: [
-        "Mine QZAR by verifying your GPU power",
-        "Earn QZAR for AI training & inference tasks",
-        "Block validation rewards",
-        "95% of resources go to useful compute",
-        "Reputation-based system",
-        "Easy hardware onboarding"
-      ],
+      title: t('ecosystem.content.miner.title'),
+      description: t('ecosystem.content.miner.desc'),
+      features: t('ecosystem.content.miner.features', { returnObjects: true }) as string[],
       image: "https://images.unsplash.com/photo-1591405351990-4726e331f141?q=80&w=2670&auto=format&fit=crop"
     },
     [UserType.DEV]: {
       icon: Code2,
-      title: "Build AI Agents & dApps",
-      description: "A unified platform for developers to deploy autonomous agents.",
-      features: [
-        "Standard OpenAI-compatible API interface",
-        "Delegate wallet control to AI agents safely",
-        "Unified API for monetization",
-        "Build trading bots & research assistants",
-        "Digital passports for AI Agents"
-      ],
+      title: t('ecosystem.content.dev.title'),
+      description: t('ecosystem.content.dev.desc'),
+      features: t('ecosystem.content.dev.features', { returnObjects: true }) as string[],
       component: <DevMockup />
     }
   };
@@ -259,8 +244,8 @@ export const Ecosystem: React.FC = () => {
     <section id="ecosystem" className="py-24 bg-quazar-dark">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
-          <h2 className="text-4xl font-bold text-white">The Ecosystem</h2>
-          <p className="text-gray-400 mt-4">Built for everyone participating in the AI economy.</p>
+          <h2 className="text-4xl font-bold text-white">{t('ecosystem.title')}</h2>
+          <p className="text-gray-400 mt-4">{t('ecosystem.subtitle')}</p>
         </div>
 
         {/* Tabs */}
@@ -275,7 +260,9 @@ export const Ecosystem: React.FC = () => {
                   : 'bg-transparent text-gray-500 border-gray-700 hover:border-gray-500 hover:text-gray-300'
               }`}
             >
-              For {type}
+              {type === UserType.USER && t('ecosystem.tabs.user')}
+              {type === UserType.MINER && t('ecosystem.tabs.miner')}
+              {type === UserType.DEV && t('ecosystem.tabs.dev')}
             </button>
           ))}
         </div>
@@ -294,7 +281,7 @@ export const Ecosystem: React.FC = () => {
               <p className="text-gray-400 text-lg mb-8">{activeContent.description}</p>
               
               <ul className="space-y-4">
-                {activeContent.features.map((feature, idx) => (
+                {Array.isArray(activeContent.features) && activeContent.features.map((feature, idx) => (
                   <li key={idx} className="flex items-start gap-3 animate-fadeIn" style={{ animationDelay: `${idx * 100}ms` }}>
                     <CheckCircle2 className="w-5 h-5 text-quazar-primary mt-1 flex-shrink-0" />
                     <span className="text-gray-300">{feature}</span>

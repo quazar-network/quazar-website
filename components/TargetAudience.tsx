@@ -1,6 +1,7 @@
 
 import React from 'react';
 import { Rocket, Building2, Cpu } from 'lucide-react';
+import { useTranslation, Trans } from 'react-i18next';
 
 // Abstract Cosmic Visuals
 const CosmicVisual: React.FC<{ type: 'startup' | 'enterprise' | 'provider' }> = ({ type }) => {
@@ -151,27 +152,29 @@ const CosmicVisual: React.FC<{ type: 'startup' | 'enterprise' | 'provider' }> = 
 };
 
 export const TargetAudience: React.FC = () => {
+  const { t } = useTranslation();
+
   const items = [
     {
       type: 'startup' as const,
       icon: Rocket,
-      title: "AI Startups & Innovators",
-      headline: "Launch your AI product in days, not months.",
-      description: "Access enterprise-grade H100 clusters without the massive capital expenditure. Scale your inference infrastructure seamlessly as your user base grows, paying only for what you use."
+      title: t('targetAudience.items.startup.title'),
+      headline: t('targetAudience.items.startup.headline'),
+      description: t('targetAudience.items.startup.desc')
     },
     {
       type: 'enterprise' as const,
       icon: Building2,
-      title: "Enterprise Scale",
-      headline: "Slash compute costs by 50-60%.",
-      description: "Run secure inference and training workloads on TEE-protected nodes via a simple API. Scale compute capacity instantly without the overhead of managing hardware or clusters."
+      title: t('targetAudience.items.enterprise.title'),
+      headline: t('targetAudience.items.enterprise.headline'),
+      description: t('targetAudience.items.enterprise.desc')
     },
     {
       type: 'provider' as const,
       icon: Cpu,
-      title: "Compute Providers",
-      headline: "Turn your GPUs into a revenue stream.",
-      description: "Connect your consumer-grade GPUs or mining rigs to the Quazar grid. Monetize your idle hardware by powering decentralized AI workloads and earn QZAR with automated payouts."
+      title: t('targetAudience.items.provider.title'),
+      headline: t('targetAudience.items.provider.headline'),
+      description: t('targetAudience.items.provider.desc')
     }
   ];
 
@@ -181,10 +184,10 @@ export const TargetAudience: React.FC = () => {
         
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">
-            Built for the <span className="text-quazar-primary">Entire Economy</span>
+            <Trans i18nKey="targetAudience.title" components={{ 1: <span className="text-quazar-primary" /> }} />
           </h2>
           <p className="text-gray-400 max-w-2xl mx-auto text-lg">
-            Connecting supply and demand in a permissionless, high-performance market.
+            {t('targetAudience.subtitle')}
           </p>
         </div>
 
