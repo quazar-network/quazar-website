@@ -3,9 +3,11 @@ import { Menu, X, Globe, ChevronDown } from 'lucide-react';
 import { QuazarLogo } from './QuazarLogo';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
+import { useReferral } from '../contexts/ReferralContext';
 
 export const Navbar: React.FC = () => {
   const { t, i18n } = useTranslation();
+  const { referralCode, referralLink } = useReferral();
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isLangMenuOpen, setIsLangMenuOpen] = useState(false);
@@ -171,13 +173,24 @@ export const Navbar: React.FC = () => {
               )}
             </div>
 
-            <a 
-              href="#roadmap"
-              onClick={(e) => handleNavClick(e, '#roadmap')}
-              className="px-5 py-2 text-sm font-bold text-black bg-quazar-primary hover:bg-cyan-300 transition-all rounded-sm uppercase tracking-wider cursor-pointer"
-            >
-              {t('navbar.launchApp')}
-            </a>
+            {referralLink ? (
+              <a 
+                href={referralLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="px-5 py-2 text-sm font-bold text-black bg-quazar-primary hover:bg-cyan-300 transition-all rounded-sm uppercase tracking-wider cursor-pointer"
+              >
+                {t('navbar.tokenSale')}
+              </a>
+            ) : (
+              <a 
+                href="#roadmap"
+                onClick={(e) => handleNavClick(e, '#roadmap')}
+                className="px-5 py-2 text-sm font-bold text-black bg-quazar-primary hover:bg-cyan-300 transition-all rounded-sm uppercase tracking-wider cursor-pointer"
+              >
+                {t('navbar.launchApp')}
+              </a>
+            )}
           </div>
 
           {/* Mobile Menu Button & Language Switcher */}

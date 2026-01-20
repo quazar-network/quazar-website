@@ -17,6 +17,7 @@ import { TermsOfUse } from './components/TermsOfUse';
 import { PrivacyPolicy } from './components/PrivacyPolicy';
 import { CookieNotice } from './components/CookieNotice';
 import { CookieConsent } from './components/CookieConsent';
+import { ReferralProvider } from './contexts/ReferralContext';
 
 const LandingPage: React.FC = () => {
   return (
@@ -106,6 +107,7 @@ function App() {
 
   return (
     <BrowserRouter>
+      <ReferralProvider>
       <div className="min-h-screen bg-quazar-black font-sans selection:bg-quazar-primary selection:text-black flex flex-col">
         <Routes>
           <Route path="/:lang" element={<Layout />}>
@@ -119,6 +121,7 @@ function App() {
           <Route path="*" element={<RootRedirect />} />
         </Routes>
       </div>
+      </ReferralProvider>
     </BrowserRouter>
   );
 }

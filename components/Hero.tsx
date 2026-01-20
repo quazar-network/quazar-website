@@ -2,9 +2,11 @@
 import React, { useEffect, useState } from 'react';
 import { ArrowRight, Cpu } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
+import { useReferral } from '../contexts/ReferralContext';
 
 export const Hero: React.FC = () => {
   const { t } = useTranslation();
+  const { referralCode, referralLink } = useReferral();
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
   const [showTooltip, setShowTooltip] = useState(false);
   const [typedText, setTypedText] = useState('');
@@ -143,14 +145,26 @@ export const Hero: React.FC = () => {
              </button>
           </div>
 
-          <a 
-            href="#roadmap"
-            onClick={scrollToRoadmap}
-            className="flex items-center justify-center gap-2 px-8 py-4 glass-panel border-quazar-primary/50 text-white font-bold text-lg rounded hover:bg-quazar-primary/10 transition-all min-w-[200px] cursor-pointer backdrop-blur-sm shadow-[0_0_20px_rgba(0,240,255,0.1)]"
-          >
-            {t('hero.startMining')}
-            <Cpu className="w-5 h-5" />
-          </a>
+          {referralLink ? (
+            <a 
+              href={referralLink}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center justify-center gap-2 px-8 py-4 glass-panel border-quazar-primary/50 text-white font-bold text-lg rounded hover:bg-quazar-primary/10 transition-all min-w-[200px] cursor-pointer backdrop-blur-sm shadow-[0_0_20px_rgba(0,240,255,0.1)]"
+            >
+              {t('navbar.tokenSale')}
+              <Cpu className="w-5 h-5" />
+            </a>
+          ) : (
+            <a 
+              href="#roadmap"
+              onClick={scrollToRoadmap}
+              className="flex items-center justify-center gap-2 px-8 py-4 glass-panel border-quazar-primary/50 text-white font-bold text-lg rounded hover:bg-quazar-primary/10 transition-all min-w-[200px] cursor-pointer backdrop-blur-sm shadow-[0_0_20px_rgba(0,240,255,0.1)]"
+            >
+              {t('hero.startMining')}
+              <Cpu className="w-5 h-5" />
+            </a>
+          )}
         </div>
 
         {/* Stats Strip - Updated with Protocol Specs */}
